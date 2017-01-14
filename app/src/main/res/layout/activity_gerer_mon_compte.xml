@@ -1,0 +1,43 @@
+<LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:weightSum="1"
+        android:orientation="vertical"
+    android:background="#011275">
+
+    <!-- TextView
+        android:id="@+id/menu_accueil"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/menu_accueil" /-->
+    
+    <Button
+            android:text="@string/recharger_compte"
+            android:id="@+id/recharger_compte"
+            android:layout_weight="0.01"
+            android:layout_height="wrap_content"
+        android:layout_width="146dp">
+    </Button>
+    <Button
+            android:text="@string/virer_argent"
+            android:id="@+id/virer_argent"
+        android:layout_height="wrap_content"
+        android:layout_width="138dp">
+    </Button>
+    <Button
+            android:text="@string/menu_accueil"
+            android:id="@+id/back_menu_accueil"
+            android:layout_weight="0.01"
+            android:layout_height="wrap_content"
+        android:layout_width="wrap_content">
+    </Button>
+    <Button
+            android:text="@string/deconnexion"
+            android:id="@+id/deconnexion"
+        android:layout_height="63dp"
+            android:background="#6fb2bd"
+            android:layout_width="183dp">
+    </Button>
+
+</LinearLayout>

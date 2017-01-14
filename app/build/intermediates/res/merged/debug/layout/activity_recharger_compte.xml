@@ -1,0 +1,87 @@
+<LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:weightSum="1"
+        android:orientation="vertical"
+    android:background="#011275">
+
+    <!-- TextView
+        android:id="@+id/menu_accueil"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/menu_accueil" /-->
+    
+    <Button
+            android:text="@string/recharger_20euro"
+            android:id="@+id/recharger_20euro"
+            android:layout_weight="0.01"
+            android:layout_height="wrap_content"
+        android:layout_width="101dp">
+    </Button>
+    <Button
+            android:text="@string/recharger_40euro"
+            android:id="@+id/recharger_40euro"
+            android:layout_weight="0.01"
+            android:layout_height="wrap_content"
+        android:layout_width="112dp"
+        android:layout_gravity="right">
+    </Button>
+    <Button
+            android:text="@string/recharger_60euro"
+            android:id="@+id/recharger_60euro"
+            android:layout_weight="0.01"
+            android:layout_height="wrap_content"
+        android:layout_width="129dp">
+    </Button>
+    <Button
+            android:text="@string/recharger_80euro"
+            android:id="@+id/recharger_80euro"
+            android:layout_weight="0.01"
+            android:layout_height="wrap_content"
+        android:layout_width="137dp"
+        android:layout_gravity="right">
+    </Button>
+
+    <Button
+            android:text="@string/recharger_100euro"
+            android:id="@+id/recharger_100euro"
+            android:layout_weight="0.01"
+            android:layout_height="wrap_content"
+        android:layout_width="144dp">
+    </Button>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Envoyer Plus"
+        android:id="@+id/button4"
+        android:layout_gravity="right"
+        android:layout_weight="0.01" />
+
+    <Button
+            android:text="@string/gerer_compte"
+            android:id="@+id/gerer_compte"
+            android:layout_weight="0.01"
+            android:layout_height="wrap_content"
+            android:layout_width="161dp">
+    </Button>
+     <Button
+            android:text="@string/menu_accueil"
+            android:id="@+id/back_menu_accueil"
+            android:layout_weight="0.01"
+            android:layout_height="wrap_content"
+         android:layout_width="162dp"
+         android:layout_gravity="right">
+    </Button>
+    <Button
+            android:text="@string/deconnexion"
+            android:id="@+id/deconnexion"
+            android:layout_weight="0.01"
+            android:layout_height="wrap_content"
+        android:layout_width="190dp"
+        android:background="#3cf3fc"
+        android:layout_gravity="center_horizontal">
+    </Button>
+
+</LinearLayout>

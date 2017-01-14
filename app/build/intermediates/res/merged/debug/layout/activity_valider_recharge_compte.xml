@@ -1,0 +1,37 @@
+<LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:weightSum="1"
+        android:orientation="vertical"
+    android:background="#011275">
+
+    <TextView
+        android:id="@+id/message_accueil"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+	<Button
+            android:text="@string/menu_accueil"
+            android:id="@+id/back_menu_accueil"
+            android:layout_weight="0.01"
+            android:layout_height="wrap_content"
+        android:layout_width="wrap_content">
+    </Button>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Valider la recharge"
+        android:id="@+id/button5" />
+
+    <Button
+            android:text="@string/deconnexion"
+            android:id="@+id/deconnexion"
+            android:layout_weight="0.01"
+            android:layout_height="wrap_content"
+            android:background="#3cf3fc"
+            android:layout_width="139dp">
+    </Button>
+
+</LinearLayout>

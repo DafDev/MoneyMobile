@@ -1,0 +1,42 @@
+<LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:weightSum="1"
+        android:orientation="vertical"
+    android:background="#011275">
+   
+    <EditText
+        	android:hint="@string/username"
+            android:layout_height="wrap_content"
+            android:id="@+id/usernameEditText"
+            android:layout_width="200dp">
+            <requestFocus></requestFocus>
+            </EditText>        
+            
+    <EditText
+        android:hint="@string/password"
+            android:inputType="textPassword"
+            android:layout_height="wrap_content"
+            android:id="@+id/passwordEditText"
+            android:layout_width="200dp">
+    </EditText>
+    
+    <EditText
+        android:id="@+id/telephone"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:hint="@string/phone" >
+     </EditText>
+	     <Button
+	            android:text="@string/valider"
+	            android:id="@+id/valider"
+	            android:layout_weight="0.01"
+	            android:layout_height="wrap_content"
+	            android:layout_width="108dp">
+	    </Button>
+	    
+	     
+	 <!-- /LinearLayout-->   
+
+</LinearLayout>
