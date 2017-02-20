@@ -4,6 +4,7 @@ import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
+import beans.UserMap;
 import util.ActivityUtil;
 import android.os.Bundle;
 import android.util.Log;
@@ -11,6 +12,8 @@ import android.view.Menu;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Toast;
+
 import beans.Banque;
 import beans.Compte;
 import beans.User;
@@ -47,7 +50,6 @@ public class InscriptionActivity extends BaseActivity {
 			public void onClick(View v) {
 				inscriptionUser();
 				//ActivityUtil.switchActivity(InscriptionActivity.this, ConnexionActivity.class, newBundle, true);
-				ActivityUtil.switchActivity(InscriptionActivity.this, AccueilActivity.class, newBundle, true);
 			}
 		});
 		
@@ -68,7 +70,7 @@ public class InscriptionActivity extends BaseActivity {
 		/*------------- Creation du compte utilisateur ------------*/
 		
 		Compte compte = new Compte("Compte Mobile","0",dateFormat.format(date));
-		user = new User(mUsername.getText().toString(),mUsername.getText().toString());
+		user = new User(mUsername.getText().toString(),mPassword.getText().toString());
 		user.setPhone(mTelephone.getText().toString());
 		user.setCompteRelation(compte);
 		
@@ -127,6 +129,18 @@ public class InscriptionActivity extends BaseActivity {
 			}
 			
 		});*/
+
+		// En attendant la BDD, on stocke le nouvel utilisateur dans la liste "users"
+		if( !(UserMap.getUsers().containsKey(mUsername.getText().toString())) ) {
+			Toast.makeText(InscriptionActivity.this, "Inscription réussie", Toast.LENGTH_LONG).show();
+			UserMap.getUsers().put(mUsername.getText().toString(),mPassword.getText().toString());
+			ActivityUtil.switchActivity(InscriptionActivity.this, ConnexionActivity.class, newBundle, true);
+		}
+		else{
+			Toast.makeText(InscriptionActivity.this, "inscription échouée", Toast.LENGTH_LONG).show();
+			Log.d("Inscription activity", "L'utilisateur est déjà inscrit");
+			onCreate(null);
+		}
 	}
 
 }

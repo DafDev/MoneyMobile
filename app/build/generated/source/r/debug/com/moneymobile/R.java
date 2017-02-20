@@ -28,14 +28,14 @@ public final class R {
     }
     public static final class id {
         public static final int accepter_argent=0x7f090002;
-        public static final int action_settings=0x7f09001f;
+        public static final int action_settings=0x7f090022;
         public static final int aide=0x7f090008;
         public static final int back_menu_accueil=0x7f090015;
         public static final int button=0x7f090009;
         public static final int button2=0x7f09000e;
         public static final int button3=0x7f09000f;
-        public static final int button4=0x7f09001c;
-        public static final int button5=0x7f09001e;
+        public static final int button4=0x7f09001f;
+        public static final int button5=0x7f090021;
         public static final int coopter_ami=0x7f090006;
         public static final int deconnexion=0x7f090007;
         public static final int demander_argent=0x7f090001;
@@ -46,16 +46,19 @@ public final class R {
         public static final int inscription=0x7f09000d;
         public static final int login=0x7f09000c;
         public static final int menu_accueil=0x7f090012;
-        public static final int message_accueil=0x7f09001d;
+        public static final int message_accueil=0x7f090020;
         public static final int montantEditText=0x7f090010;
+        public static final int newpasswordEditText=0x7f090017;
+        public static final int newusernameEditText=0x7f090016;
         public static final int passwordEditText=0x7f09000b;
-        public static final int recharger_100euro=0x7f09001b;
-        public static final int recharger_20euro=0x7f090017;
-        public static final int recharger_40euro=0x7f090018;
-        public static final int recharger_60euro=0x7f090019;
-        public static final int recharger_80euro=0x7f09001a;
+        public static final int recharger_100euro=0x7f09001e;
+        public static final int recharger_20euro=0x7f09001a;
+        public static final int recharger_40euro=0x7f09001b;
+        public static final int recharger_60euro=0x7f09001c;
+        public static final int recharger_80euro=0x7f09001d;
         public static final int recharger_compte=0x7f090013;
-        public static final int telephone=0x7f090016;
+        public static final int telephone=0x7f090019;
+        public static final int updateButton=0x7f090018;
         public static final int usernameEditText=0x7f09000a;
         public static final int valider=0x7f090011;
         public static final int virer_argent=0x7f090014;

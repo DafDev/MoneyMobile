@@ -1,7 +1,0 @@
-#Sat Jan 14 18:25:00 CET 2017
-base.0=C\:\\Users\\afahd\\Documents\\school\\Efrei\\PA8\\MoneyMobile_V4\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10\\instant-run-bootstrap_3e573161a6013af8cc2a0f1e86c7897808c96e30
-renamed.1=classes.dex
-renamed.0=classes2.dex
-file.1=C\:\\Users\\afahd\\Documents\\school\\Efrei\\PA8\\MoneyMobile_V4\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10\\instant-run_86c6a99a9e510bea54248f2741c58e50678fec80\\classes.dex
-base.1=C\:\\Users\\afahd\\Documents\\school\\Efrei\\PA8\\MoneyMobile_V4\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10\\instant-run_86c6a99a9e510bea54248f2741c58e50678fec80
-file.0=C\:\\Users\\afahd\\Documents\\school\\Efrei\\PA8\\MoneyMobile_V4\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10\\instant-run-bootstrap_3e573161a6013af8cc2a0f1e86c7897808c96e30\\classes.dex

@@ -4,6 +4,7 @@ import com.stackmob.sdk.api.StackMobOptions;
 import com.stackmob.sdk.callback.StackMobModelCallback;
 import com.stackmob.sdk.exception.StackMobException;
 
+import beans.UserMap;
 import util.ActivityUtil;
 import android.os.Bundle;
 import android.util.Log;
@@ -12,6 +13,9 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import java.util.HashMap;
+
 import beans.User;
 
 public class ConnexionActivity extends BaseActivity {
@@ -47,6 +51,9 @@ public class ConnexionActivity extends BaseActivity {
         mLogin.setOnClickListener(new View.OnClickListener() {
 			@Override
 			public void onClick(View v) {
+
+				//PARTIE BENAZZOUZ
+				/*
 				//Log.d("J'ai clike sur login =>",user.getID());
 				//Toast.makeText(ConnexionActivity.this, "J'ai clik� sur login", Toast.LENGTH_SHORT).show();
 				//ActivityUtil.switchActivity(ConnexionActivity.this, AccueilActivity.class, newBundle, true);
@@ -67,7 +74,7 @@ public class ConnexionActivity extends BaseActivity {
 				    	Log.d("Connection error",user.getID()+" + "+mPassword.getText().toString());
 				    }
 				});
-				
+				*/
 				
 				//Log.d("avant init user =>",user.getID()+"");
 				
@@ -88,7 +95,22 @@ public class ConnexionActivity extends BaseActivity {
 				    	
 				    }
 				});*/
-				
+
+				//PARTIE TIMOTHEE (temporaire)
+				user = new User(newBundle.getString("login"),newBundle.getString("password"));
+				String name = mUsername.getText().toString();
+				String pass = mPassword.getText().toString();
+				HashMap<String, String> usermap = UserMap.getUsers();
+				if(usermap.containsKey(name) && usermap.get(name).equals(pass)) {
+					Log.d("User in DB",""+name);
+					ActivityUtil.switchActivity(ConnexionActivity.this, AccueilActivity.class, newBundle, true);
+				}
+				else{
+					Log.d("User not in DB",name+","+pass);
+					onCreate(null);
+				}
+
+
 			}
 		});
         

@@ -1,18 +1,18 @@
 [
     {
-        "merged": "C:\\Users\\afahd\\Documents\\school\\Efrei\\PA8\\MoneyMobile_V4\\app\\build\\intermediates\\res\\merged\\debug\\anim\\slide_in_from_right.xml",
-        "source": "C:\\Users\\afahd\\Documents\\school\\Efrei\\PA8\\MoneyMobile_V4\\app\\src\\main\\res\\anim\\slide_in_from_right.xml"
+        "merged": "D:\\PROJET MONEY\\MoneyMobile\\app\\build\\intermediates\\res\\merged\\debug\\anim\\slide_out_to_left.xml",
+        "source": "D:\\PROJET MONEY\\MoneyMobile\\app\\src\\main\\res\\anim\\slide_out_to_left.xml"
     },
     {
-        "merged": "C:\\Users\\afahd\\Documents\\school\\Efrei\\PA8\\MoneyMobile_V4\\app\\build\\intermediates\\res\\merged\\debug\\anim\\slide_out_to_right.xml",
-        "source": "C:\\Users\\afahd\\Documents\\school\\Efrei\\PA8\\MoneyMobile_V4\\app\\src\\main\\res\\anim\\slide_out_to_right.xml"
+        "merged": "D:\\PROJET MONEY\\MoneyMobile\\app\\build\\intermediates\\res\\merged\\debug\\anim\\slide_in_from_left.xml",
+        "source": "D:\\PROJET MONEY\\MoneyMobile\\app\\src\\main\\res\\anim\\slide_in_from_left.xml"
     },
     {
-        "merged": "C:\\Users\\afahd\\Documents\\school\\Efrei\\PA8\\MoneyMobile_V4\\app\\build\\intermediates\\res\\merged\\debug\\anim\\slide_in_from_left.xml",
-        "source": "C:\\Users\\afahd\\Documents\\school\\Efrei\\PA8\\MoneyMobile_V4\\app\\src\\main\\res\\anim\\slide_in_from_left.xml"
+        "merged": "D:\\PROJET MONEY\\MoneyMobile\\app\\build\\intermediates\\res\\merged\\debug\\anim\\slide_out_to_right.xml",
+        "source": "D:\\PROJET MONEY\\MoneyMobile\\app\\src\\main\\res\\anim\\slide_out_to_right.xml"
     },
     {
-        "merged": "C:\\Users\\afahd\\Documents\\school\\Efrei\\PA8\\MoneyMobile_V4\\app\\build\\intermediates\\res\\merged\\debug\\anim\\slide_out_to_left.xml",
-        "source": "C:\\Users\\afahd\\Documents\\school\\Efrei\\PA8\\MoneyMobile_V4\\app\\src\\main\\res\\anim\\slide_out_to_left.xml"
+        "merged": "D:\\PROJET MONEY\\MoneyMobile\\app\\build\\intermediates\\res\\merged\\debug\\anim\\slide_in_from_right.xml",
+        "source": "D:\\PROJET MONEY\\MoneyMobile\\app\\src\\main\\res\\anim\\slide_in_from_right.xml"
     }
 ]

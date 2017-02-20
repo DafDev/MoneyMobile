@@ -1,86 +1,86 @@
 [
     {
-        "merged": "C:\\Users\\afahd\\Documents\\school\\Efrei\\PA8\\MoneyMobile_V4\\app\\build\\intermediates\\res\\merged\\debug\\menu\\recharger_compte_confirmation.xml",
-        "source": "C:\\Users\\afahd\\Documents\\school\\Efrei\\PA8\\MoneyMobile_V4\\app\\src\\main\\res\\menu\\recharger_compte_confirmation.xml"
+        "merged": "D:\\PROJET MONEY\\MoneyMobile\\app\\build\\intermediates\\res\\merged\\debug\\menu\\connexion.xml",
+        "source": "D:\\PROJET MONEY\\MoneyMobile\\app\\src\\main\\res\\menu\\connexion.xml"
     },
     {
-        "merged": "C:\\Users\\afahd\\Documents\\school\\Efrei\\PA8\\MoneyMobile_V4\\app\\build\\intermediates\\res\\merged\\debug\\menu\\accepter_argent.xml",
-        "source": "C:\\Users\\afahd\\Documents\\school\\Efrei\\PA8\\MoneyMobile_V4\\app\\src\\main\\res\\menu\\accepter_argent.xml"
+        "merged": "D:\\PROJET MONEY\\MoneyMobile\\app\\build\\intermediates\\res\\merged\\debug\\menu\\historique.xml",
+        "source": "D:\\PROJET MONEY\\MoneyMobile\\app\\src\\main\\res\\menu\\historique.xml"
     },
     {
-        "merged": "C:\\Users\\afahd\\Documents\\school\\Efrei\\PA8\\MoneyMobile_V4\\app\\build\\intermediates\\res\\merged\\debug\\menu\\historique.xml",
-        "source": "C:\\Users\\afahd\\Documents\\school\\Efrei\\PA8\\MoneyMobile_V4\\app\\src\\main\\res\\menu\\historique.xml"
+        "merged": "D:\\PROJET MONEY\\MoneyMobile\\app\\build\\intermediates\\res\\merged\\debug\\menu\\envoyer_argent.xml",
+        "source": "D:\\PROJET MONEY\\MoneyMobile\\app\\src\\main\\res\\menu\\envoyer_argent.xml"
     },
     {
-        "merged": "C:\\Users\\afahd\\Documents\\school\\Efrei\\PA8\\MoneyMobile_V4\\app\\build\\intermediates\\res\\merged\\debug\\menu\\confirmer_virement.xml",
-        "source": "C:\\Users\\afahd\\Documents\\school\\Efrei\\PA8\\MoneyMobile_V4\\app\\src\\main\\res\\menu\\confirmer_virement.xml"
+        "merged": "D:\\PROJET MONEY\\MoneyMobile\\app\\build\\intermediates\\res\\merged\\debug\\menu\\recharger_solde.xml",
+        "source": "D:\\PROJET MONEY\\MoneyMobile\\app\\src\\main\\res\\menu\\recharger_solde.xml"
     },
     {
-        "merged": "C:\\Users\\afahd\\Documents\\school\\Efrei\\PA8\\MoneyMobile_V4\\app\\build\\intermediates\\res\\merged\\debug\\menu\\coopter_un_ami.xml",
-        "source": "C:\\Users\\afahd\\Documents\\school\\Efrei\\PA8\\MoneyMobile_V4\\app\\src\\main\\res\\menu\\coopter_un_ami.xml"
+        "merged": "D:\\PROJET MONEY\\MoneyMobile\\app\\build\\intermediates\\res\\merged\\debug\\menu\\demander_argent.xml",
+        "source": "D:\\PROJET MONEY\\MoneyMobile\\app\\src\\main\\res\\menu\\demander_argent.xml"
     },
     {
-        "merged": "C:\\Users\\afahd\\Documents\\school\\Efrei\\PA8\\MoneyMobile_V4\\app\\build\\intermediates\\res\\merged\\debug\\menu\\recharger_solde.xml",
-        "source": "C:\\Users\\afahd\\Documents\\school\\Efrei\\PA8\\MoneyMobile_V4\\app\\src\\main\\res\\menu\\recharger_solde.xml"
+        "merged": "D:\\PROJET MONEY\\MoneyMobile\\app\\build\\intermediates\\res\\merged\\debug\\menu\\valider_recharge_compte.xml",
+        "source": "D:\\PROJET MONEY\\MoneyMobile\\app\\src\\main\\res\\menu\\valider_recharge_compte.xml"
     },
     {
-        "merged": "C:\\Users\\afahd\\Documents\\school\\Efrei\\PA8\\MoneyMobile_V4\\app\\build\\intermediates\\res\\merged\\debug\\menu\\nouveau_solde.xml",
-        "source": "C:\\Users\\afahd\\Documents\\school\\Efrei\\PA8\\MoneyMobile_V4\\app\\src\\main\\res\\menu\\nouveau_solde.xml"
+        "merged": "D:\\PROJET MONEY\\MoneyMobile\\app\\build\\intermediates\\res\\merged\\debug\\menu\\coopter_un_ami.xml",
+        "source": "D:\\PROJET MONEY\\MoneyMobile\\app\\src\\main\\res\\menu\\coopter_un_ami.xml"
     },
     {
-        "merged": "C:\\Users\\afahd\\Documents\\school\\Efrei\\PA8\\MoneyMobile_V4\\app\\build\\intermediates\\res\\merged\\debug\\menu\\accueil.xml",
-        "source": "C:\\Users\\afahd\\Documents\\school\\Efrei\\PA8\\MoneyMobile_V4\\app\\src\\main\\res\\menu\\accueil.xml"
+        "merged": "D:\\PROJET MONEY\\MoneyMobile\\app\\build\\intermediates\\res\\merged\\debug\\menu\\recharger_compte_confirmation.xml",
+        "source": "D:\\PROJET MONEY\\MoneyMobile\\app\\src\\main\\res\\menu\\recharger_compte_confirmation.xml"
     },
     {
-        "merged": "C:\\Users\\afahd\\Documents\\school\\Efrei\\PA8\\MoneyMobile_V4\\app\\build\\intermediates\\res\\merged\\debug\\menu\\aide.xml",
-        "source": "C:\\Users\\afahd\\Documents\\school\\Efrei\\PA8\\MoneyMobile_V4\\app\\src\\main\\res\\menu\\aide.xml"
+        "merged": "D:\\PROJET MONEY\\MoneyMobile\\app\\build\\intermediates\\res\\merged\\debug\\menu\\accepter_argent.xml",
+        "source": "D:\\PROJET MONEY\\MoneyMobile\\app\\src\\main\\res\\menu\\accepter_argent.xml"
     },
     {
-        "merged": "C:\\Users\\afahd\\Documents\\school\\Efrei\\PA8\\MoneyMobile_V4\\app\\build\\intermediates\\res\\merged\\debug\\menu\\inscription.xml",
-        "source": "C:\\Users\\afahd\\Documents\\school\\Efrei\\PA8\\MoneyMobile_V4\\app\\src\\main\\res\\menu\\inscription.xml"
+        "merged": "D:\\PROJET MONEY\\MoneyMobile\\app\\build\\intermediates\\res\\merged\\debug\\menu\\gerer_mon_compte.xml",
+        "source": "D:\\PROJET MONEY\\MoneyMobile\\app\\src\\main\\res\\menu\\gerer_mon_compte.xml"
     },
     {
-        "merged": "C:\\Users\\afahd\\Documents\\school\\Efrei\\PA8\\MoneyMobile_V4\\app\\build\\intermediates\\res\\merged\\debug\\menu\\base.xml",
-        "source": "C:\\Users\\afahd\\Documents\\school\\Efrei\\PA8\\MoneyMobile_V4\\app\\src\\main\\res\\menu\\base.xml"
+        "merged": "D:\\PROJET MONEY\\MoneyMobile\\app\\build\\intermediates\\res\\merged\\debug\\menu\\recharger_compte.xml",
+        "source": "D:\\PROJET MONEY\\MoneyMobile\\app\\src\\main\\res\\menu\\recharger_compte.xml"
     },
     {
-        "merged": "C:\\Users\\afahd\\Documents\\school\\Efrei\\PA8\\MoneyMobile_V4\\app\\build\\intermediates\\res\\merged\\debug\\menu\\connexion.xml",
-        "source": "C:\\Users\\afahd\\Documents\\school\\Efrei\\PA8\\MoneyMobile_V4\\app\\src\\main\\res\\menu\\connexion.xml"
+        "merged": "D:\\PROJET MONEY\\MoneyMobile\\app\\build\\intermediates\\res\\merged\\debug\\menu\\confirmer_recharge.xml",
+        "source": "D:\\PROJET MONEY\\MoneyMobile\\app\\src\\main\\res\\menu\\confirmer_recharge.xml"
     },
     {
-        "merged": "C:\\Users\\afahd\\Documents\\school\\Efrei\\PA8\\MoneyMobile_V4\\app\\build\\intermediates\\res\\merged\\debug\\menu\\deconnexion.xml",
-        "source": "C:\\Users\\afahd\\Documents\\school\\Efrei\\PA8\\MoneyMobile_V4\\app\\src\\main\\res\\menu\\deconnexion.xml"
+        "merged": "D:\\PROJET MONEY\\MoneyMobile\\app\\build\\intermediates\\res\\merged\\debug\\menu\\aide.xml",
+        "source": "D:\\PROJET MONEY\\MoneyMobile\\app\\src\\main\\res\\menu\\aide.xml"
     },
     {
-        "merged": "C:\\Users\\afahd\\Documents\\school\\Efrei\\PA8\\MoneyMobile_V4\\app\\build\\intermediates\\res\\merged\\debug\\menu\\gerer_mon_compte.xml",
-        "source": "C:\\Users\\afahd\\Documents\\school\\Efrei\\PA8\\MoneyMobile_V4\\app\\src\\main\\res\\menu\\gerer_mon_compte.xml"
+        "merged": "D:\\PROJET MONEY\\MoneyMobile\\app\\build\\intermediates\\res\\merged\\debug\\menu\\base.xml",
+        "source": "D:\\PROJET MONEY\\MoneyMobile\\app\\src\\main\\res\\menu\\base.xml"
     },
     {
-        "merged": "C:\\Users\\afahd\\Documents\\school\\Efrei\\PA8\\MoneyMobile_V4\\app\\build\\intermediates\\res\\merged\\debug\\menu\\solde_compte.xml",
-        "source": "C:\\Users\\afahd\\Documents\\school\\Efrei\\PA8\\MoneyMobile_V4\\app\\src\\main\\res\\menu\\solde_compte.xml"
+        "merged": "D:\\PROJET MONEY\\MoneyMobile\\app\\build\\intermediates\\res\\merged\\debug\\menu\\deconnexion.xml",
+        "source": "D:\\PROJET MONEY\\MoneyMobile\\app\\src\\main\\res\\menu\\deconnexion.xml"
     },
     {
-        "merged": "C:\\Users\\afahd\\Documents\\school\\Efrei\\PA8\\MoneyMobile_V4\\app\\build\\intermediates\\res\\merged\\debug\\menu\\demander_argent.xml",
-        "source": "C:\\Users\\afahd\\Documents\\school\\Efrei\\PA8\\MoneyMobile_V4\\app\\src\\main\\res\\menu\\demander_argent.xml"
+        "merged": "D:\\PROJET MONEY\\MoneyMobile\\app\\build\\intermediates\\res\\merged\\debug\\menu\\inscription.xml",
+        "source": "D:\\PROJET MONEY\\MoneyMobile\\app\\src\\main\\res\\menu\\inscription.xml"
     },
     {
-        "merged": "C:\\Users\\afahd\\Documents\\school\\Efrei\\PA8\\MoneyMobile_V4\\app\\build\\intermediates\\res\\merged\\debug\\menu\\recharger_compte.xml",
-        "source": "C:\\Users\\afahd\\Documents\\school\\Efrei\\PA8\\MoneyMobile_V4\\app\\src\\main\\res\\menu\\recharger_compte.xml"
+        "merged": "D:\\PROJET MONEY\\MoneyMobile\\app\\build\\intermediates\\res\\merged\\debug\\menu\\solde_compte.xml",
+        "source": "D:\\PROJET MONEY\\MoneyMobile\\app\\src\\main\\res\\menu\\solde_compte.xml"
     },
     {
-        "merged": "C:\\Users\\afahd\\Documents\\school\\Efrei\\PA8\\MoneyMobile_V4\\app\\build\\intermediates\\res\\merged\\debug\\menu\\confirmer_recharge.xml",
-        "source": "C:\\Users\\afahd\\Documents\\school\\Efrei\\PA8\\MoneyMobile_V4\\app\\src\\main\\res\\menu\\confirmer_recharge.xml"
+        "merged": "D:\\PROJET MONEY\\MoneyMobile\\app\\build\\intermediates\\res\\merged\\debug\\menu\\gerer_mon_pseudo.xml",
+        "source": "D:\\PROJET MONEY\\MoneyMobile\\app\\src\\main\\res\\menu\\gerer_mon_pseudo.xml"
     },
     {
-        "merged": "C:\\Users\\afahd\\Documents\\school\\Efrei\\PA8\\MoneyMobile_V4\\app\\build\\intermediates\\res\\merged\\debug\\menu\\valider_recharge_compte.xml",
-        "source": "C:\\Users\\afahd\\Documents\\school\\Efrei\\PA8\\MoneyMobile_V4\\app\\src\\main\\res\\menu\\valider_recharge_compte.xml"
+        "merged": "D:\\PROJET MONEY\\MoneyMobile\\app\\build\\intermediates\\res\\merged\\debug\\menu\\accueil.xml",
+        "source": "D:\\PROJET MONEY\\MoneyMobile\\app\\src\\main\\res\\menu\\accueil.xml"
     },
     {
-        "merged": "C:\\Users\\afahd\\Documents\\school\\Efrei\\PA8\\MoneyMobile_V4\\app\\build\\intermediates\\res\\merged\\debug\\menu\\envoyer_argent.xml",
-        "source": "C:\\Users\\afahd\\Documents\\school\\Efrei\\PA8\\MoneyMobile_V4\\app\\src\\main\\res\\menu\\envoyer_argent.xml"
+        "merged": "D:\\PROJET MONEY\\MoneyMobile\\app\\build\\intermediates\\res\\merged\\debug\\menu\\nouveau_solde.xml",
+        "source": "D:\\PROJET MONEY\\MoneyMobile\\app\\src\\main\\res\\menu\\nouveau_solde.xml"
     },
     {
-        "merged": "C:\\Users\\afahd\\Documents\\school\\Efrei\\PA8\\MoneyMobile_V4\\app\\build\\intermediates\\res\\merged\\debug\\menu\\gerer_mon_pseudo.xml",
-        "source": "C:\\Users\\afahd\\Documents\\school\\Efrei\\PA8\\MoneyMobile_V4\\app\\src\\main\\res\\menu\\gerer_mon_pseudo.xml"
+        "merged": "D:\\PROJET MONEY\\MoneyMobile\\app\\build\\intermediates\\res\\merged\\debug\\menu\\confirmer_virement.xml",
+        "source": "D:\\PROJET MONEY\\MoneyMobile\\app\\src\\main\\res\\menu\\confirmer_virement.xml"
     }
 ]
