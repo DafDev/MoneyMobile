@@ -2,6 +2,7 @@ package com.moneymobile;
 
 import java.util.List;
 
+import beans.ActiveUser;
 import util.ActivityUtil;
 import android.os.Bundle;
 import android.view.Menu;
@@ -44,6 +45,7 @@ public class DeconnexionActivity extends BaseActivity {
 		            loggedInUser.logout(new StackMobModelCallback() {
 					    @Override
 					    public void success() {
+							ActiveUser.setUser(null);
 					    	ActivityUtil.switchActivity(DeconnexionActivity.this, ConnexionActivity.class, newBundle, true);
 					    }
 					  

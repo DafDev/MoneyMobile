@@ -4,6 +4,7 @@ import com.stackmob.sdk.api.StackMobOptions;
 import com.stackmob.sdk.callback.StackMobModelCallback;
 import com.stackmob.sdk.exception.StackMobException;
 
+import beans.ActiveUser;
 import beans.UserMap;
 import util.ActivityUtil;
 import android.os.Bundle;
@@ -103,6 +104,7 @@ public class ConnexionActivity extends BaseActivity {
 				HashMap<String, String> usermap = UserMap.getUsers();
 				if(usermap.containsKey(name) && usermap.get(name).equals(pass)) {
 					Log.d("User in DB",""+name);
+					ActiveUser.setUser(user);
 					ActivityUtil.switchActivity(ConnexionActivity.this, AccueilActivity.class, newBundle, true);
 				}
 				else{

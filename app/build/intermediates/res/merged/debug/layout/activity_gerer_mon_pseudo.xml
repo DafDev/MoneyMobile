@@ -16,7 +16,6 @@
         android:layout_height="wrap_content"
         android:id="@+id/newusernameEditText"
         android:layout_width="200dp">
-        <requestFocus></requestFocus>
     </EditText>
 
     <TextView
