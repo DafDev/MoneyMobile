@@ -103,13 +103,12 @@ public class ConnexionActivity extends BaseActivity {
 				String pass = mPassword.getText().toString();
 				HashMap<String, String> usermap = UserMap.getUsers();
 				if(usermap.containsKey(name) && usermap.get(name).equals(pass)) {
-					Log.d("User in DB",""+name);
+					Toast.makeText(ConnexionActivity.this, "Connexion réussie", Toast.LENGTH_LONG).show();
 					ActiveUser.setUser(user);
 					ActivityUtil.switchActivity(ConnexionActivity.this, AccueilActivity.class, newBundle, true);
 				}
 				else{
-					Log.d("User not in DB",name+","+pass);
-					onCreate(null);
+					Toast.makeText(ConnexionActivity.this, "Utilisateur non inscrit", Toast.LENGTH_LONG).show();
 				}
 
 

@@ -87,10 +87,6 @@
             android:label="@string/title_activity_recharger_compte" >
         </activity>
         <activity
-            android:name="com.moneymobile.RechargerSoldeActivity"
-            android:label="@string/title_activity_recharger_solde" >
-        </activity>
-        <activity
             android:name="com.moneymobile.ConfirmerRechargeActivity"
             android:label="@string/title_activity_confirmer_recharge" >
         </activity>

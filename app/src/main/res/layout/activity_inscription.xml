@@ -4,7 +4,7 @@
         android:layout_height="fill_parent"
         android:weightSum="1"
         android:orientation="vertical"
-    android:background="#011275">
+    android:background="#00802b">
    
     <EditText
         	android:hint="@string/username"

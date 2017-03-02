@@ -7,7 +7,7 @@
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context=".ConfirmerRechargeActivity"
-    android:background="#011275">
+    android:background="#00802b">
 
     <Button
         android:layout_width="wrap_content"

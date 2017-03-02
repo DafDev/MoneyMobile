@@ -1,6 +1,6 @@
 -- Merging decision tree log ---
 manifest
-ADDED from D:\PROJET MONEY\MoneyMobile\app\src\main\AndroidManifest.xml:2:1-119:12
+ADDED from D:\PROJET MONEY\MoneyMobile\app\src\main\AndroidManifest.xml:2:1-115:12
 	package
 		ADDED from D:\PROJET MONEY\MoneyMobile\app\src\main\AndroidManifest.xml:3:5-30
 		INJECTED from D:\PROJET MONEY\MoneyMobile\app\src\main\AndroidManifest.xml
@@ -60,7 +60,7 @@ ADDED from D:\PROJET MONEY\MoneyMobile\app\src\main\AndroidManifest.xml:21:5-68
 	android:name
 		ADDED from D:\PROJET MONEY\MoneyMobile\app\src\main\AndroidManifest.xml:21:22-65
 application
-ADDED from D:\PROJET MONEY\MoneyMobile\app\src\main\AndroidManifest.xml:23:5-117:19
+ADDED from D:\PROJET MONEY\MoneyMobile\app\src\main\AndroidManifest.xml:23:5-113:19
 	android:label
 		ADDED from D:\PROJET MONEY\MoneyMobile\app\src\main\AndroidManifest.xml:26:9-41
 	android:allowBackup
@@ -163,45 +163,39 @@ ADDED from D:\PROJET MONEY\MoneyMobile\app\src\main\AndroidManifest.xml:85:9-88:
 		ADDED from D:\PROJET MONEY\MoneyMobile\app\src\main\AndroidManifest.xml:87:13-68
 	android:name
 		ADDED from D:\PROJET MONEY\MoneyMobile\app\src\main\AndroidManifest.xml:86:13-67
-activity#com.moneymobile.RechargerSoldeActivity
+activity#com.moneymobile.ConfirmerRechargeActivity
 ADDED from D:\PROJET MONEY\MoneyMobile\app\src\main\AndroidManifest.xml:89:9-92:20
 	android:label
-		ADDED from D:\PROJET MONEY\MoneyMobile\app\src\main\AndroidManifest.xml:91:13-67
+		ADDED from D:\PROJET MONEY\MoneyMobile\app\src\main\AndroidManifest.xml:91:13-70
 	android:name
-		ADDED from D:\PROJET MONEY\MoneyMobile\app\src\main\AndroidManifest.xml:90:13-66
-activity#com.moneymobile.ConfirmerRechargeActivity
+		ADDED from D:\PROJET MONEY\MoneyMobile\app\src\main\AndroidManifest.xml:90:13-69
+activity#com.moneymobile.NouveauSoldeActivity
 ADDED from D:\PROJET MONEY\MoneyMobile\app\src\main\AndroidManifest.xml:93:9-96:20
 	android:label
-		ADDED from D:\PROJET MONEY\MoneyMobile\app\src\main\AndroidManifest.xml:95:13-70
+		ADDED from D:\PROJET MONEY\MoneyMobile\app\src\main\AndroidManifest.xml:95:13-65
 	android:name
-		ADDED from D:\PROJET MONEY\MoneyMobile\app\src\main\AndroidManifest.xml:94:13-69
-activity#com.moneymobile.NouveauSoldeActivity
+		ADDED from D:\PROJET MONEY\MoneyMobile\app\src\main\AndroidManifest.xml:94:13-64
+activity#com.moneymobile.ConfirmerVirementActivity
 ADDED from D:\PROJET MONEY\MoneyMobile\app\src\main\AndroidManifest.xml:97:9-100:20
 	android:label
-		ADDED from D:\PROJET MONEY\MoneyMobile\app\src\main\AndroidManifest.xml:99:13-65
+		ADDED from D:\PROJET MONEY\MoneyMobile\app\src\main\AndroidManifest.xml:99:13-70
 	android:name
-		ADDED from D:\PROJET MONEY\MoneyMobile\app\src\main\AndroidManifest.xml:98:13-64
-activity#com.moneymobile.ConfirmerVirementActivity
+		ADDED from D:\PROJET MONEY\MoneyMobile\app\src\main\AndroidManifest.xml:98:13-69
+activity#com.moneymobile.RechargerCompteConfirmationActivity
 ADDED from D:\PROJET MONEY\MoneyMobile\app\src\main\AndroidManifest.xml:101:9-104:20
 	android:label
-		ADDED from D:\PROJET MONEY\MoneyMobile\app\src\main\AndroidManifest.xml:103:13-70
+		ADDED from D:\PROJET MONEY\MoneyMobile\app\src\main\AndroidManifest.xml:103:13-81
 	android:name
-		ADDED from D:\PROJET MONEY\MoneyMobile\app\src\main\AndroidManifest.xml:102:13-69
-activity#com.moneymobile.RechargerCompteConfirmationActivity
+		ADDED from D:\PROJET MONEY\MoneyMobile\app\src\main\AndroidManifest.xml:102:13-79
+activity#com.moneymobile.SoldeCompteActivity
 ADDED from D:\PROJET MONEY\MoneyMobile\app\src\main\AndroidManifest.xml:105:9-108:20
 	android:label
-		ADDED from D:\PROJET MONEY\MoneyMobile\app\src\main\AndroidManifest.xml:107:13-81
+		ADDED from D:\PROJET MONEY\MoneyMobile\app\src\main\AndroidManifest.xml:107:13-64
 	android:name
-		ADDED from D:\PROJET MONEY\MoneyMobile\app\src\main\AndroidManifest.xml:106:13-79
-activity#com.moneymobile.SoldeCompteActivity
+		ADDED from D:\PROJET MONEY\MoneyMobile\app\src\main\AndroidManifest.xml:106:13-63
+activity#com.moneymobile.ValiderRechargeCompteActivity
 ADDED from D:\PROJET MONEY\MoneyMobile\app\src\main\AndroidManifest.xml:109:9-112:20
 	android:label
-		ADDED from D:\PROJET MONEY\MoneyMobile\app\src\main\AndroidManifest.xml:111:13-64
+		ADDED from D:\PROJET MONEY\MoneyMobile\app\src\main\AndroidManifest.xml:111:13-75
 	android:name
-		ADDED from D:\PROJET MONEY\MoneyMobile\app\src\main\AndroidManifest.xml:110:13-63
-activity#com.moneymobile.ValiderRechargeCompteActivity
-ADDED from D:\PROJET MONEY\MoneyMobile\app\src\main\AndroidManifest.xml:113:9-116:20
-	android:label
-		ADDED from D:\PROJET MONEY\MoneyMobile\app\src\main\AndroidManifest.xml:115:13-75
-	android:name
-		ADDED from D:\PROJET MONEY\MoneyMobile\app\src\main\AndroidManifest.xml:114:13-73
+		ADDED from D:\PROJET MONEY\MoneyMobile\app\src\main\AndroidManifest.xml:110:13-73

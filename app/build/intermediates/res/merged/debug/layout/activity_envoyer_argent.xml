@@ -2,16 +2,14 @@
         xmlns:android="http://schemas.android.com/apk/res/android"
         android:layout_width="fill_parent"
         android:layout_height="fill_parent"
-        android:weightSum="1"
         android:orientation="vertical"
-    android:background="#011275">
+        android:background="#00802b">
 
     <EditText
         android:id="@+id/montantEditText"
         android:layout_width="200dp"
         android:layout_height="wrap_content"
         android:hint="@string/montant">
-
         <requestFocus />
     </EditText>
     <EditText
