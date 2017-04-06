@@ -68,12 +68,12 @@
         "source": "D:\\PROJET MONEY\\MoneyMobile\\app\\src\\main\\res\\layout\\activity_aide.xml"
     },
     {
-        "merged": "D:\\PROJET MONEY\\MoneyMobile\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_accueil.xml",
-        "source": "D:\\PROJET MONEY\\MoneyMobile\\app\\src\\main\\res\\layout\\activity_accueil.xml"
-    },
-    {
         "merged": "D:\\PROJET MONEY\\MoneyMobile\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_recharger_compte.xml",
         "source": "D:\\PROJET MONEY\\MoneyMobile\\app\\src\\main\\res\\layout\\activity_recharger_compte.xml"
+    },
+    {
+        "merged": "D:\\PROJET MONEY\\MoneyMobile\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_accueil.xml",
+        "source": "D:\\PROJET MONEY\\MoneyMobile\\app\\src\\main\\res\\layout\\activity_accueil.xml"
     },
     {
         "merged": "D:\\PROJET MONEY\\MoneyMobile\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_valider_recharge_compte.xml",

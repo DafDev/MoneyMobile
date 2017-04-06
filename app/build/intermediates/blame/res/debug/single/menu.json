@@ -36,6 +36,10 @@
         "source": "D:\\PROJET MONEY\\MoneyMobile\\app\\src\\main\\res\\menu\\accepter_argent.xml"
     },
     {
+        "merged": "D:\\PROJET MONEY\\MoneyMobile\\app\\build\\intermediates\\res\\merged\\debug\\menu\\gerer_mon_compte.xml",
+        "source": "D:\\PROJET MONEY\\MoneyMobile\\app\\src\\main\\res\\menu\\gerer_mon_compte.xml"
+    },
+    {
         "merged": "D:\\PROJET MONEY\\MoneyMobile\\app\\build\\intermediates\\res\\merged\\debug\\menu\\recharger_compte.xml",
         "source": "D:\\PROJET MONEY\\MoneyMobile\\app\\src\\main\\res\\menu\\recharger_compte.xml"
     },
@@ -44,8 +48,8 @@
         "source": "D:\\PROJET MONEY\\MoneyMobile\\app\\src\\main\\res\\menu\\confirmer_recharge.xml"
     },
     {
-        "merged": "D:\\PROJET MONEY\\MoneyMobile\\app\\build\\intermediates\\res\\merged\\debug\\menu\\gerer_mon_compte.xml",
-        "source": "D:\\PROJET MONEY\\MoneyMobile\\app\\src\\main\\res\\menu\\gerer_mon_compte.xml"
+        "merged": "D:\\PROJET MONEY\\MoneyMobile\\app\\build\\intermediates\\res\\merged\\debug\\menu\\aide.xml",
+        "source": "D:\\PROJET MONEY\\MoneyMobile\\app\\src\\main\\res\\menu\\aide.xml"
     },
     {
         "merged": "D:\\PROJET MONEY\\MoneyMobile\\app\\build\\intermediates\\res\\merged\\debug\\menu\\base.xml",
@@ -54,10 +58,6 @@
     {
         "merged": "D:\\PROJET MONEY\\MoneyMobile\\app\\build\\intermediates\\res\\merged\\debug\\menu\\deconnexion.xml",
         "source": "D:\\PROJET MONEY\\MoneyMobile\\app\\src\\main\\res\\menu\\deconnexion.xml"
-    },
-    {
-        "merged": "D:\\PROJET MONEY\\MoneyMobile\\app\\build\\intermediates\\res\\merged\\debug\\menu\\aide.xml",
-        "source": "D:\\PROJET MONEY\\MoneyMobile\\app\\src\\main\\res\\menu\\aide.xml"
     },
     {
         "merged": "D:\\PROJET MONEY\\MoneyMobile\\app\\build\\intermediates\\res\\merged\\debug\\menu\\inscription.xml",
