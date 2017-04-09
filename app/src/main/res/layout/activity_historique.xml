@@ -3,10 +3,11 @@
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
     android:orientation="vertical"
+    android:background="#00802b"
     tools:context=".HistoriqueActivity" >
 
-<WebView  xmlns:android="http://schemas.android.com/apk/res/android"
-    android:id="@+id/historiquewebview"
+<TextView
+    android:id="@+id/historiqueTextView"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent" />
 
