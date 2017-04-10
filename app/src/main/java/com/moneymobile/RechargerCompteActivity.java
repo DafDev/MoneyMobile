@@ -6,10 +6,10 @@ import android.app.Activity;
 import android.view.Menu;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
 
 public class RechargerCompteActivity extends Activity {
 
-	private Button deconnexion;
 	private Button recharge_20Euro;
 	private Button recharge_40Euro;
 	private Button recharge_60Euro;
@@ -17,6 +17,8 @@ public class RechargerCompteActivity extends Activity {
 	private Button recharge_100Euro;
 	private Button menu_accueil;
 	private Button gerer_compte;
+	private Button envoyerplusbutton;
+	private EditText envoyerplus;
 	private Bundle newBundle;
 	
 	@Override
@@ -31,9 +33,9 @@ public class RechargerCompteActivity extends Activity {
 		recharge_100Euro		= (Button) findViewById(R.id.recharger_100euro);
 		gerer_compte			= (Button) findViewById(R.id.gerer_compte);
 		menu_accueil 			= (Button) findViewById(R.id.back_menu_accueil);
-		deconnexion				= (Button) findViewById(R.id.deconnexion);
+		envoyerplusbutton		= (Button) findViewById(R.id.envoyerplusButton);
+		envoyerplus				= (EditText) findViewById(R.id.envoyerplusRechargerCompteEditText);
 		newBundle = new Bundle();
-		
 		
 		recharge_20Euro.setOnClickListener(new View.OnClickListener() {
 			
@@ -92,25 +94,28 @@ public class RechargerCompteActivity extends Activity {
 				
 			}
 		});
-		
-		deconnexion.setOnClickListener(new View.OnClickListener() {
-			
-			@Override
-			public void onClick(View arg0) {
-				ActivityUtil.switchActivity(RechargerCompteActivity.this, DeconnexionActivity.class, newBundle, true);
-				
-			}
-		});
-		
+
 		gerer_compte.setOnClickListener(new View.OnClickListener() {
-			
+
 			@Override
 			public void onClick(View arg0) {
 				ActivityUtil.switchActivity(RechargerCompteActivity.this, GererMonCompteActivity.class, newBundle, true);
-				
+
 			}
 		});
-		
+
+		envoyerplusbutton.setOnClickListener(new View.OnClickListener() {
+			@Override
+			public void onClick(View arg0) {
+				if(envoyerplus.getText().toString() != "") {
+					newBundle.putInt("recharge", Integer.parseInt(envoyerplus.getText().toString()));
+					ActivityUtil.switchActivity(RechargerCompteActivity.this, RechargerCompteConfirmationActivity.class, newBundle, true);
+				}
+				else {
+					ActivityUtil.switchActivity(RechargerCompteActivity.this, RechargerCompteActivity.class, newBundle, true);
+				}
+			}
+		});
 	}
 
 	@Override

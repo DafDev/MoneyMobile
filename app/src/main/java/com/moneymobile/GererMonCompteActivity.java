@@ -1,20 +1,18 @@
 package com.moneymobile;
 
 import util.ActivityUtil;
+
 import android.os.Bundle;
 import android.util.Log;
 import android.view.Menu;
 import android.view.View;
 import android.widget.Button;
-import android.widget.EditText;
 
 public class GererMonCompteActivity extends BaseActivity {
 
-	//private Button valider;
 	private Button menu_accueil;
 	private Button recharger_compte;
-	private Button virer_argent;
-	private Button deconnexion;
+	private Button retirer_argent;
 	private Bundle newBundle;
 	
 	@Override
@@ -22,56 +20,22 @@ public class GererMonCompteActivity extends BaseActivity {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_gerer_mon_compte);
 		
-		menu_accueil 		= (Button) findViewById(R.id.back_menu_accueil);
-		//valider 			= (Button) findViewById(R.id.valider); 
-		recharger_compte 	= (Button) findViewById(R.id.recharger_compte); 
-		virer_argent 		= (Button) findViewById(R.id.virer_argent); 
-		deconnexion			= (Button) findViewById(R.id.deconnexion); 
+		menu_accueil 		= (Button) findViewById(R.id.back_menu_accueilGerermoncompte);
+		recharger_compte 	= (Button) findViewById(R.id.recharger_compteGererMonCompte);
+		retirer_argent 		= (Button) findViewById(R.id.retirer_argentGererMonCompte);
 		newBundle = new Bundle();
 		
 		menu_accueil.setOnClickListener(new View.OnClickListener() {
-			
 			@Override
 			public void onClick(View arg0) {
 				ActivityUtil.switchActivity(GererMonCompteActivity.this, AccueilActivity.class, newBundle, true);
-				
 			}
 		});
 		
-		/*valider.setOnClickListener(new View.OnClickListener() {
-			
-			@Override
-			public void onClick(View arg0) {
-				// TODO Auto-generated method stub
-				
-			}
-		});*/
-		
 		recharger_compte.setOnClickListener(new View.OnClickListener() {
-			
 			@Override
 			public void onClick(View arg0) {
 				ActivityUtil.switchActivity(GererMonCompteActivity.this, RechargerCompteActivity.class, newBundle, true);
-				
-			}
-		});
-		
-		virer_argent.setOnClickListener(new View.OnClickListener() {
-			
-			@Override
-			public void onClick(View arg0) {
-				//Log.d("Clique virer","");
-				ActivityUtil.switchActivity(GererMonCompteActivity.this, EnvoyerArgentActivity.class, newBundle, true);
-				
-			}
-		});
-		
-		deconnexion.setOnClickListener(new View.OnClickListener() {
-			
-			@Override
-			public void onClick(View arg0) {
-				ActivityUtil.switchActivity(GererMonCompteActivity.this, DeconnexionActivity.class, newBundle, true);
-				
 			}
 		});
 	}

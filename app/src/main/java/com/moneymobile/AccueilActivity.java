@@ -31,18 +31,15 @@ public class AccueilActivity extends BaseActivity {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_accueil);
 		
-		
 		newBundle = getIntent().getExtras();
 		
 		envoyer 		= (Button) findViewById(R.id.envoyer_argent); 
 		demander 		=  (Button) findViewById(R.id.demander_argent);
-		accepter 		=  (Button) findViewById(R.id.accepter_argent);
 		gererCompte 	=  (Button) findViewById(R.id.gerer_compte);
 		historique 		=  (Button) findViewById(R.id.historique);
-		gererPseudo 	=  (Button) findViewById(R.id.gerer_pseudo);
 		coopter 		=  (Button) findViewById(R.id.coopter_ami);
 		aide 			=  (Button) findViewById(R.id.aide);
-		deconnexion 	=  (Button) findViewById(R.id.deconnexion);
+		deconnexion 	=  (Button) findViewById(R.id.deconnexionAccueilActivity);
 		
 		envoyer.setOnClickListener(new View.OnClickListener() {
 			@Override
@@ -58,13 +55,6 @@ public class AccueilActivity extends BaseActivity {
 			}
 		});
 		
-		accepter.setOnClickListener(new View.OnClickListener() {
-			@Override
-			public void onClick(View v) {
-				ActivityUtil.switchActivity(AccueilActivity.this, AccepterArgentActivity.class, newBundle, true);
-			}
-		});
-		
 		gererCompte.setOnClickListener(new View.OnClickListener() {
 			@Override
 			public void onClick(View v) {
@@ -76,13 +66,6 @@ public class AccueilActivity extends BaseActivity {
 			@Override
 			public void onClick(View v) {
 				ActivityUtil.switchActivity(AccueilActivity.this, HistoriqueActivity.class, newBundle, true);
-			}
-		});
-		
-		gererPseudo.setOnClickListener(new View.OnClickListener() {
-			@Override
-			public void onClick(View v) {
-				ActivityUtil.switchActivity(AccueilActivity.this, GererMonPseudoActivity.class, newBundle, true);
 			}
 		});
 		

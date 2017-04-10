@@ -1,49 +1,79 @@
 package beans;
 
-//import com.stackmob.sdk.model.StackMobModel;
+public class User {
 
-import java.util.ArrayList;
-import java.util.List;
+	private static User User = new User();
 
-import com.stackmob.sdk.model.StackMobUser;
+	public static User getInstance() { return User; }
 
-public class User extends StackMobUser {
-	
-	private String phone = "0618319489";
-	private List<Historique> user_historique_relation = new ArrayList<Historique>();
-	private List<Transaction> user_transaction_relation = new ArrayList<Transaction>();
-	private Compte user_compte_relation = new Compte();
-	
-	public User(String name, String pass){
-		super(User.class,name,pass);
-		setID(name);
+	private User() {}
+
+	public static int getId() {
+		return id;
 	}
-	
-	public User(){
-		super(User.class);
+	public static void setId(int id) {
+		beans.User.id = id;
 	}
-	
-	public void setPhone(String tel){
-		this.phone = tel;
+	public static String getNom() {
+		return nom;
 	}
-	
-	public void setCompteRelation(Compte compte){
-		this.user_compte_relation = compte;
+	public static void setNom(String nom) {
+		beans.User.nom = nom;
 	}
-	
-	public String getPhone(){
-		return this.phone;
+	public static String getPrenom() {
+		return prenom;
 	}
-	
-	public List<Historique> getListHistorique(){
-		return this.user_historique_relation;
+	public static void setPrenom(String prenom) {
+		beans.User.prenom = prenom;
 	}
-	
-	public List<Transaction> getListTransaction(){
-		return this.user_transaction_relation ;
+	public static String getTelephone() {
+		return telephone;
 	}
-	
-	public Compte getCompteRelation(){
-		return this.user_compte_relation;
+	public static void setTelephone(String telephone) {
+		beans.User.telephone = telephone;
+	}
+	public static int getSolde() {
+		return solde;
+	}
+	public static void setSolde(int solde) {
+		beans.User.solde = solde;
+	}
+	public static int getIban() {
+		return iban;
+	}
+	public static void setIban(int iban) {
+		beans.User.iban = iban;
+	}
+	public static int getBic() {
+		return bic;
+	}
+	public static void setBic(int bic) {
+		beans.User.bic = bic;
+	}
+	public static String getMdp() {
+		return mdp;
+	}
+	public static void setMdp(String mdp) {
+		beans.User.mdp = mdp;
+	}
+
+	private static int id;
+	private static String nom;
+	private static String prenom;
+	private static String telephone;
+	private static int solde;
+	private static int iban;
+	private static int bic;
+	private static String mdp;
+
+	public static void nouveau(int id2, String nom2, String prenom2, String tel, int solde2, int iban2, int bic2, String mdp2){
+		id = id2;
+		nom = nom2;
+		prenom = prenom2;
+		telephone = tel;
+		solde = solde2;
+		iban = iban2;
+		bic = bic2;
+		mdp = mdp2;
 	}
 }

@@ -5,13 +5,8 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.io.UnsupportedEncodingException;
-import java.text.DateFormat;
-import java.text.SimpleDateFormat;
 import java.util.ArrayList;
-import java.util.Date;
 import java.util.List;
-
-import beans.UserMap;
 import util.ActivityUtil;
 
 import android.app.ProgressDialog;
@@ -19,20 +14,11 @@ import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
 import android.os.AsyncTask;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.Menu;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
-
-import beans.Banque;
-import beans.Compte;
-import beans.User;
-
-import com.stackmob.sdk.api.StackMobOptions;
-import com.stackmob.sdk.callback.StackMobModelCallback;
-import com.stackmob.sdk.exception.StackMobException;
 
 import org.apache.http.HttpEntity;
 import org.apache.http.HttpResponse;
@@ -42,8 +28,6 @@ import org.apache.http.client.entity.UrlEncodedFormEntity;
 import org.apache.http.client.methods.HttpPost;
 import org.apache.http.impl.client.DefaultHttpClient;
 import org.apache.http.message.BasicNameValuePair;
-import org.json.JSONArray;
-import org.json.JSONException;
 
 public class InscriptionActivity extends BaseActivity {
 
@@ -85,10 +69,9 @@ public class InscriptionActivity extends BaseActivity {
 
 		if (networkInfo != null && networkInfo.isAvailable() && networkInfo.isConnected()) {
 			//boolean wifi = networkInfo.getType() == ConnectivityManager.TYPE_WIFI;
-			Toast.makeText(InscriptionActivity.this, "vous etes connecté à internet", Toast.LENGTH_LONG).show();
 
 		} else {
-			Toast.makeText(InscriptionActivity.this, "vous n'etes pas connecté à internet", Toast.LENGTH_LONG).show();
+			Toast.makeText(InscriptionActivity.this, "Vous n'etes pas connecté à Internet", Toast.LENGTH_LONG).show();
 			ActivityUtil.switchActivity(InscriptionActivity.this, AccueilActivity.class, new Bundle(), true);
 		}
 
@@ -149,8 +132,10 @@ public class InscriptionActivity extends BaseActivity {
 					String line;
 					BufferedReader reader = new BufferedReader(new InputStreamReader(instream, "UTF-8"));
 
+					line = reader.readLine();
+					buffer.append(line);
 					while ((line = reader.readLine()) != null) {
-						buffer.append(line + "\n");
+						buffer.append("\n" + line);
 					}
 
 					return buffer.toString();
@@ -245,18 +230,6 @@ public class InscriptionActivity extends BaseActivity {
 			}
 			
 		});
-
-		// En attendant la BDD, on stocke le nouvel utilisateur dans la liste "users"
-		if( !(UserMap.getUsers().containsKey(mUsername.getText().toString())) ) {
-			Toast.makeText(InscriptionActivity.this, "Inscription réussie", Toast.LENGTH_LONG).show();
-			UserMap.getUsers().put(mUsername.getText().toString(),mPassword.getText().toString());
-			ActivityUtil.switchActivity(InscriptionActivity.this, ConnexionActivity.class, newBundle, true);
-		}
-		else{
-			Toast.makeText(InscriptionActivity.this, "inscription échouée", Toast.LENGTH_LONG).show();
-			Log.d("Inscription activity", "L'utilisateur est déjà inscrit");
-			onCreate(null);
-		}
 
 
 	}*/

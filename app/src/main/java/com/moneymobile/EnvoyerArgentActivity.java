@@ -1,17 +1,32 @@
 package com.moneymobile;
-
+//ActivityUtil.switchActivity(EnvoyerArgentActivity.this, AccueilActivity.class, new Bundle(), true);
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.InputStreamReader;
+import java.io.UnsupportedEncodingException;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
+import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
 import util.ActivityUtil;
+
+import android.app.AlertDialog;
+import android.app.ProgressDialog;
+import android.content.DialogInterface;
+import android.net.ConnectivityManager;
+import android.net.NetworkInfo;
+import android.os.AsyncTask;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.Menu;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Toast;
+
 import beans.Historique;
 import beans.Transaction;
 import beans.User;
@@ -22,118 +37,111 @@ import com.stackmob.sdk.api.StackMobQuery;
 import com.stackmob.sdk.callback.StackMobQueryCallback;
 import com.stackmob.sdk.exception.StackMobException;
 
+import org.apache.http.HttpEntity;
+import org.apache.http.HttpResponse;
+import org.apache.http.NameValuePair;
+import org.apache.http.client.HttpClient;
+import org.apache.http.client.entity.UrlEncodedFormEntity;
+import org.apache.http.client.methods.HttpPost;
+import org.apache.http.impl.client.DefaultHttpClient;
+import org.apache.http.message.BasicNameValuePair;
+import org.json.JSONArray;
+import org.json.JSONException;
+
 public class EnvoyerArgentActivity extends BaseActivity {
 
 	private EditText mMontant;
 	private EditText mDestinataire;
 	private Button mValider;
-	private Button mMenu;
-	private Button mDeconnexion;
-	private Bundle newBundle;
-	private User loggedInUser;
+	private ProgressDialog pd;
+	private String montantString;
+	private String destinataireString;
+
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_envoyer_argent);
 		
-		mMontant 		= (EditText)findViewById(R.id.montantEditText);
-		mDestinataire	= (EditText)  findViewById(R.id.usernameEditText);
-		mValider		= (Button)  findViewById(R.id.valider);
-		mMenu			= (Button)  findViewById(R.id.menu_accueil);
-		mDeconnexion	= (Button)  findViewById(R.id.deconnexion); // 
-		newBundle = new Bundle();
+		mMontant 		= (EditText) findViewById(R.id.montantEnvoyerArgentEditText);
+		mDestinataire	= (EditText) findViewById(R.id.telephoneEnvoyerArgentEditText);
+		mValider		= (Button)  findViewById(R.id.validerEnvoyerArgentButton);
 		
 		mValider.setOnClickListener(new View.OnClickListener() {
-			
 			@Override
-			public void onClick(View arg0) {
-				
-				if(StackMob.getStackMob().isLoggedIn()) {
-					Log.d("je suis bien connecte","bien bien");
-				    User.getLoggedInUser(User.class,StackMobOptions.depthOf(2), new StackMobQueryCallback<User>() {
-				        @Override
-				        public void success(List<User> list) {
-				        	
-				        	Log.d("User connect get",list.get(0).getID());
-				        	loggedInUser = list.get(0);
-				        	int currentSolde = 0;
-				            int ancienSold = Integer.valueOf(loggedInUser.getCompteRelation().getSolde());
-			    			int montant = Integer.valueOf(mMontant.getText().toString());
-				             currentSolde = ancienSold - montant;
-				            
-				        	DateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
-							Date date = new Date();
-							Historique histo = new Historique();
-							
-							loggedInUser.getCompteRelation().setSolde(currentSolde+"");
-							loggedInUser.getListHistorique().add(new Historique(dateFormat.format(date),"Virement",mDestinataire.getText().toString(),currentSolde +""));
-							loggedInUser.getListTransaction().add(new Transaction(dateFormat.format(date),"Virement",mDestinataire.getText().toString(),currentSolde +""));
-							Log.d("Saving user connect",list.get(0).getID());
-							loggedInUser.save(StackMobOptions.depthOf(2));
-							
-				            User.query(User.class, new StackMobQuery().fieldIsEqualTo("username", mDestinataire.getText().toString()),StackMobOptions.depthOf(2), new StackMobQueryCallback<User>(){
-								@Override
-								public void failure(StackMobException arg0) {
-									// TODO Auto-generated method stub
-									
-								}
+			public void onClick(View v) {
+				// Test présence internet
+				ConnectivityManager connectivityManager = (ConnectivityManager) getSystemService(CONNECTIVITY_SERVICE);
+				NetworkInfo networkInfo = connectivityManager.getActiveNetworkInfo();
 
-								@Override
-								public void success(List<User> arg0) {
-									
-									DateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
-									Date date = new Date();
-									Log.d("Receiver user found",arg0.get(0).getID());
-									User userDestinataire = arg0.get(0);
-									int ancienSold = Integer.valueOf(userDestinataire.getCompteRelation().getSolde());
-					    			int montant = Integer.valueOf(mMontant.getText().toString());
-					    			int currentSolde =  ancienSold + montant;
-									
-					    			userDestinataire.getCompteRelation().setSolde(currentSolde+"");
-									userDestinataire.getListHistorique().add(new Historique(dateFormat.format(date),"Reception",loggedInUser.getID(),currentSolde +""));
-									userDestinataire.getListTransaction().add(new Transaction(dateFormat.format(date),"Reception",loggedInUser.getID(),currentSolde +""));
-									Log.d("Saving receiver user ",arg0.get(0).getID());
-									userDestinataire.save(StackMobOptions.depthOf(2));
-									Log.d("Withdrawal succeeded",currentSolde+"");
-								}
-				            	
-				            });
-				        }
-				  
-				        @Override
-				        public void failure(StackMobException e) {
-				            //User newlyLoggedInUser = doLogin();
-				            //continueWithApp(newlyLoggedInUser);zsszz
-				        	ActivityUtil.switchActivity(EnvoyerArgentActivity.this, ConnexionActivity.class, newBundle, true);
-				        }
-				    });
+				if (networkInfo != null && networkInfo.isAvailable() && networkInfo.isConnected()) {
+					//boolean wifi = networkInfo.getType() == ConnectivityManager.TYPE_WIFI;
+					montantString = mMontant.getText().toString();
+					destinataireString = mDestinataire.getText().toString();
+					new envoyerargentTask().execute();
 				} else {
-				    //User newlyLoggedInUser = doLogin();
-				    //continueWithApp(newlyLoggedInUser);
-					ActivityUtil.switchActivity(EnvoyerArgentActivity.this, ConnexionActivity.class, newBundle, true);
+					Toast.makeText(EnvoyerArgentActivity.this, "Vous n'etes pas connecté à Internet", Toast.LENGTH_LONG).show();
+					ActivityUtil.switchActivity(EnvoyerArgentActivity.this, AccueilActivity.class, new Bundle(), true);
 				}
-				
 			}
 		});
-		
-		mMenu.setOnClickListener(new View.OnClickListener() {
-			
-			@Override
-			public void onClick(View v) {
-				ActivityUtil.switchActivity(EnvoyerArgentActivity.this, AccueilActivity.class, newBundle, true);
-				
+	}
+
+	private class envoyerargentTask extends AsyncTask<String, String, String> {
+
+		protected void onPreExecute() {
+			super.onPreExecute();
+			pd = new ProgressDialog(EnvoyerArgentActivity.this);
+			pd.setMessage("Please wait");
+			pd.setCancelable(false);
+			pd.show();
+		}
+
+		protected String doInBackground(String... params) {
+			HttpClient httpclient = new DefaultHttpClient();
+			HttpPost httppost = new HttpPost("http://10.0.2.2/moneymobile/envoyerargent.php");
+			// Request parameters and other properties.
+			List<NameValuePair> parameters = new ArrayList<NameValuePair>(4);
+			parameters.add(new BasicNameValuePair("sender", User.getTelephone()));
+			parameters.add(new BasicNameValuePair("password", User.getMdp()));
+			parameters.add(new BasicNameValuePair("receiver", destinataireString));
+			parameters.add(new BasicNameValuePair("amount", montantString));
+			try {
+				httppost.setEntity(new UrlEncodedFormEntity(parameters, "UTF-8"));
 			}
-		});
-		
-		mDeconnexion.setOnClickListener(new View.OnClickListener() {
-			
-			@Override
-			public void onClick(View v) {
-				ActivityUtil.switchActivity(EnvoyerArgentActivity.this, DeconnexionActivity.class, newBundle, true);
-				
+			catch (UnsupportedEncodingException e) {e.printStackTrace();}
+
+			//Execute and get the response
+			try {
+				HttpResponse response = httpclient.execute(httppost);
+				HttpEntity entity = response.getEntity();
+
+				if (entity != null) {
+					InputStream instream = entity.getContent();
+					StringBuilder buffer = new StringBuilder();
+					String line;
+					BufferedReader reader = new BufferedReader(new InputStreamReader(instream, "UTF-8"));
+
+					line = reader.readLine();
+					buffer.append(line);
+					while ((line = reader.readLine()) != null) {
+						buffer.append("\n" + line);
+					}
+					return buffer.toString();
+				}
 			}
-		});
-		
+			catch (IOException e) {e.printStackTrace();}
+			return "envoyerargentTask error";
+		}
+
+		@Override
+		protected void onPostExecute(String result) {
+			super.onPostExecute(result);
+			if (pd.isShowing()) {
+				pd.dismiss();
+			}
+			Toast.makeText(EnvoyerArgentActivity.this, result, Toast.LENGTH_LONG).show();
+			ActivityUtil.switchActivity(EnvoyerArgentActivity.this, AccueilActivity.class, new Bundle(), true);
+		}
 	}
 
 	@Override

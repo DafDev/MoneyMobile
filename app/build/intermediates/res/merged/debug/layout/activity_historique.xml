@@ -9,6 +9,8 @@
 <TextView
     android:id="@+id/historiqueTextView"
     android:layout_width="fill_parent"
-    android:layout_height="fill_parent" />
+    android:layout_height="fill_parent"
+    android:textSize="@dimen/text_size"
+    android:textIsSelectable="true" />
 
 </LinearLayout>

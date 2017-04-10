@@ -39,7 +39,7 @@ public class ValiderRechargeCompteActivity extends Activity {
 		deconnexion			= (Button) findViewById(R.id.deconnexion);		
 		
 		//message_accueil.setText("nouveau solde du compte "+bundle.getString("recharge")+" Euro(s)");
-		
+		/*
 		if(StackMob.getStackMob().isLoggedIn()) {
 			//Log.d("je suis connecte !!","bien bien");
 		    User.getLoggedInUser(User.class,StackMobOptions.depthOf(2), new StackMobQueryCallback<User>() {
@@ -86,7 +86,7 @@ public class ValiderRechargeCompteActivity extends Activity {
 		        		
 		        	});
 		        	/*banqueDepot.setUserRelation(loggedInUser);
-		        	*/
+		        	*//*
 		        }
 
 				@Override
@@ -100,7 +100,7 @@ public class ValiderRechargeCompteActivity extends Activity {
 		    //continueWithApp(newlyLoggedInUser);
 			Log.d("Erreur lors de la tentative de connexion",":( :(");
 			//ActivityUtil.switchActivity(RechargerCompteConfirmationActivity.this, ConnexionActivity.class, bundle, true);		
-		}
+		}*/
 		
 		
 		menu_accueil.setOnClickListener(new View.OnClickListener() {

@@ -7,27 +7,30 @@
    
     <EditText
 		android:id="@+id/firstnameInscriptionEditText"
-		android:hint="First name"
+		android:hint="Prénom"
 		android:digits="abcdefghijklmnopqrstuvwxyz- "
 		android:layout_height="wrap_content"
-		android:layout_width="200dp" >
+		android:layout_width="200dp"
+		android:layout_gravity="center_horizontal" >
 		<requestFocus></requestFocus>
 	</EditText>
 
 	<EditText
 		android:id="@+id/lastnameInscriptionEditText"
-		android:hint="Last name"
+		android:hint="Nom de famille"
 		android:digits="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ- "
 		android:layout_height="wrap_content"
-		android:layout_width="200dp" >
+		android:layout_width="200dp"
+		android:layout_gravity="center_horizontal" >
 	</EditText>
 
 	<EditText
 		android:id="@+id/cellphoneInscriptionEditText"
-		android:hint="Cell phone"
+		android:hint="Téléphone"
 		android:inputType="phone"
 		android:layout_width="200dp"
-		android:layout_height="wrap_content" />
+		android:layout_height="wrap_content"
+		android:layout_gravity="center_horizontal" />
 
     <EditText
 		android:id="@+id/ibanInscriptionEditText"
@@ -35,7 +38,8 @@
 		android:inputType="number"
 		android:digits="0123456789"
 		android:layout_height="wrap_content"
-		android:layout_width="200dp" />
+		android:layout_width="200dp"
+		android:layout_gravity="center_horizontal" />
 
 	<EditText
 		android:id="@+id/bicInscriptionEditText"
@@ -43,19 +47,22 @@
 		android:inputType="number"
 		android:digits="0123456789"
 		android:layout_height="wrap_content"
-		android:layout_width="200dp" />
+		android:layout_width="200dp"
+		android:layout_gravity="center_horizontal" />
 
 	<EditText
 		android:id="@+id/passwordInscriptionEditText"
-		android:hint="Password"
+		android:hint="Mot de passe"
 		android:inputType="textPassword"
 		android:layout_height="wrap_content"
-		android:layout_width="200dp" />
+		android:layout_width="200dp"
+		android:layout_gravity="center_horizontal" />
 
 	 <Button
 		android:id="@+id/validateIncriptionButton"
 		android:text="@string/valider"
 		android:layout_height="wrap_content"
-		android:layout_width="108dp"/>
+		android:layout_width="108dp"
+		 android:layout_gravity="center_horizontal" />
 
 </LinearLayout>

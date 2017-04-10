@@ -37,7 +37,7 @@ public class ValiderRechargeCompte {
 	public void setContextActivity(Activity activityConfirmationRecharge){
 		this.contextActivity = activityConfirmationRecharge;
 	}
-	
+	/*
 	public void recharger(){
 		
 		
@@ -77,6 +77,6 @@ public class ValiderRechargeCompte {
 			}
     		
     	});
-	}
+	}*/
 
 }

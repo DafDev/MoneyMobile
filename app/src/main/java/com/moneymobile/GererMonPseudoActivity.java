@@ -1,18 +1,10 @@
 package com.moneymobile;
 
 import android.os.Bundle;
-import android.app.Activity;
 import android.view.Menu;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.Toast;
-
-import java.util.HashMap;
-
-import beans.ActiveUser;
-import beans.User;
-import beans.UserMap;
 
 public class GererMonPseudoActivity extends BaseActivity {
 
@@ -35,16 +27,7 @@ public class GererMonPseudoActivity extends BaseActivity {
 		mUpdate.setOnClickListener(new View.OnClickListener() {
 			@Override
 			public void onClick(View view) {
-				HashMap<String, String> userMap = UserMap.getUsers();
-				if (userMap.containsKey(newusername)) {
-					Toast.makeText(GererMonPseudoActivity.this, "Ce nom est déjà utilisé, tentez un autre", Toast.LENGTH_LONG).show();
-				}
-				else {
-					userMap.remove(ActiveUser.getUser().getID());
-					userMap.put(newusername, newpassword);
-					ActiveUser.setUser(new User(newusername, newpassword));
-					Toast.makeText(GererMonPseudoActivity.this, "Informations remplacées", Toast.LENGTH_LONG).show();
-				}
+
 			}
 		});
 	}

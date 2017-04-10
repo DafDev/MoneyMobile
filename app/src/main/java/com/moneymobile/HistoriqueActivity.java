@@ -38,6 +38,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import beans.Historique;
+import beans.User;
 import util.ActivityUtil;
 
 public class HistoriqueActivity extends BaseActivity {
@@ -60,10 +61,9 @@ public class HistoriqueActivity extends BaseActivity {
 
 		if (networkInfo != null && networkInfo.isAvailable() && networkInfo.isConnected()) {
 			//boolean wifi = networkInfo.getType() == ConnectivityManager.TYPE_WIFI;
-			Toast.makeText(HistoriqueActivity.this, "vous etes connecté à internet", Toast.LENGTH_LONG).show();
 			new JsonTask().execute();
 		} else {
-			Toast.makeText(HistoriqueActivity.this, "vous n'etes pas connecté à internet", Toast.LENGTH_LONG).show();
+			Toast.makeText(HistoriqueActivity.this, "Vous n'etes pas connecté à Internet", Toast.LENGTH_LONG).show();
 			ActivityUtil.switchActivity(HistoriqueActivity.this, AccueilActivity.class, new Bundle(), true);
 		}
 	}
@@ -74,7 +74,7 @@ public class HistoriqueActivity extends BaseActivity {
 			super.onPreExecute();
 
 			pd = new ProgressDialog(HistoriqueActivity.this);
-			pd.setMessage("Please wait");
+			pd.setMessage("Veuillez patienter");
 			pd.setCancelable(false);
 			pd.show();
 		}
@@ -85,8 +85,8 @@ public class HistoriqueActivity extends BaseActivity {
 
 			// Request parameters and other properties.
 			List<NameValuePair> parameters = new ArrayList<NameValuePair>(2);
-			parameters.add(new BasicNameValuePair("telephone", "012345"));
-			parameters.add(new BasicNameValuePair("mdp", "aaa"));
+			parameters.add(new BasicNameValuePair("telephone", User.getTelephone()));
+			parameters.add(new BasicNameValuePair("password", User.getMdp()));
 			try {
 				httppost.setEntity(new UrlEncodedFormEntity(parameters, "UTF-8"));
 			}
@@ -98,17 +98,19 @@ public class HistoriqueActivity extends BaseActivity {
 				HttpEntity entity = response.getEntity();
 
 				if (entity != null) {
+
 					InputStream instream = entity.getContent();
 					StringBuilder buffer = new StringBuilder();
 					String line;
 					BufferedReader reader = new BufferedReader(new InputStreamReader(instream, "UTF-8"));
 
+					line = reader.readLine();
+					buffer.append(line);
 					while ((line = reader.readLine()) != null) {
-						buffer.append(line + "\n");
+						buffer.append("\n" + line);
 					}
-
 					if (buffer.toString().equals("erreur")) {
-						return "This user is not registered";
+						return "Vous n'etes pas inscrit dans la base de donnees";
 					}
 
 					JSONArray jArray = new JSONArray(buffer.toString());
