@@ -60,7 +60,7 @@ public class RechargerCompteConfirmationActivity extends Activity {
 		setContentView(R.layout.activity_recharger_compte_confirmation); 
 		
 		bundle 				= getIntent().getExtras();
-		message_accueil		= (TextView) findViewById(R.id.message_accueil);
+		message_accueil		= (TextView) findViewById(R.id.message_accueilRechargercompteconfirmationTextView);
 		valider				= (Button) findViewById(R.id.valider);
 		gererCompte 		= (Button) findViewById(R.id.gerer_compte);
 		menu_accueil 		= (Button) findViewById(R.id.back_menu_accueil);
@@ -134,7 +134,7 @@ public class RechargerCompteConfirmationActivity extends Activity {
 			HttpPost httppost = new HttpPost("http://10.0.2.2/moneymobile/recharge.php");
 
 			// Request parameters and other properties.
-			List<NameValuePair> parameters = new ArrayList<NameValuePair>(2);
+			List<NameValuePair> parameters = new ArrayList<NameValuePair>(3);
 			parameters.add(new BasicNameValuePair("telephone", User.getTelephone()));
 			parameters.add(new BasicNameValuePair("password", User.getMdp()));
 			parameters.add(new BasicNameValuePair("amount", montant+""));
@@ -160,6 +160,7 @@ public class RechargerCompteConfirmationActivity extends Activity {
 					while ((line = reader.readLine()) != null) {
 						buffer.append("\n" + line);
 					}
+					User.setSolde(User.getSolde()+montant);
 					return buffer.toString();
 				}
 			}

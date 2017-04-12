@@ -63,10 +63,6 @@
             android:label="@string/title_activity_historique" >
         </activity>
         <activity
-            android:name="com.moneymobile.GererMonPseudoActivity"
-            android:label="@string/title_activity_gerer_mon_pseudo" >
-        </activity>
-        <activity
             android:name="com.moneymobile.CoopterUnAmiActivity"
             android:label="@string/title_activity_coopter_un_ami" >
         </activity>
@@ -91,10 +87,6 @@
             android:label="@string/title_activity_confirmer_recharge" >
         </activity>
         <activity
-            android:name="com.moneymobile.NouveauSoldeActivity"
-            android:label="@string/title_activity_nouveau_solde" >
-        </activity>
-        <activity
             android:name="com.moneymobile.ConfirmerVirementActivity"
             android:label="@string/title_activity_confirmer_virement" >
         </activity>
@@ -103,12 +95,12 @@
             android:label="@string/title_activity_recharger_compte_confirmation" >
         </activity>
         <activity
-            android:name="com.moneymobile.SoldeCompteActivity"
-            android:label="@string/title_activity_solde_compte" >
+            android:name="com.moneymobile.RetirerActivity"
+            android:label="RetirerActivity" >
         </activity>
         <activity
-            android:name="com.moneymobile.ValiderRechargeCompteActivity"
-            android:label="@string/title_activity_valider_recharge_compte" >
+            android:name="com.moneymobile.RetirerConfirmationActivity"
+            android:label="RetirerConfirmationActivity" >
         </activity>
     </application>
 

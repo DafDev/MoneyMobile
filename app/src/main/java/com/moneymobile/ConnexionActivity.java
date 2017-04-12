@@ -183,22 +183,20 @@ public class ConnexionActivity extends BaseActivity {
 			}
 			else {}
 			if (result.charAt(0) == 'A') {
-				Toast.makeText(ConnexionActivity.this, "Connection successful", Toast.LENGTH_LONG).show();
+				Toast.makeText(ConnexionActivity.this, "Connexion reussie", Toast.LENGTH_LONG).show();
 
 				JSONArray jArray;
 				try {
 					jArray = new JSONArray(json);
-					User user = User.getInstance();
 					User.nouveau(jArray.getInt(0), jArray.getString(1), jArray.getString(2), jArray.getString(3), jArray.getInt(4), jArray.getInt(5), jArray.getInt(6), jArray.getString(7));
 				}
 				catch (JSONException e) {e.printStackTrace();}
-
 				ActivityUtil.switchActivity(ConnexionActivity.this, AccueilActivity.class, new Bundle(), true);
 			}
 			else if (result.charAt(0) == 'B') {
 				AlertDialog alertDialog = new AlertDialog.Builder(ConnexionActivity.this).create();
 				alertDialog.setTitle("Alert");
-				alertDialog.setMessage("You were already connected on another phone, you should change your password if you disconnected last time");
+				alertDialog.setMessage("Vous étiez déjà connecté, si vous vous êtes déconnecté la dernière fois votre compte est compromis, changez votre mot de passe");
 				alertDialog.setButton(AlertDialog.BUTTON_NEUTRAL, "OK",
 						new DialogInterface.OnClickListener() {
 							public void onClick(DialogInterface dialog, int which) {
@@ -207,7 +205,6 @@ public class ConnexionActivity extends BaseActivity {
 								JSONArray jArray;
 								try {
 									jArray = new JSONArray(json);
-									User user = User.getInstance();
 									User.nouveau(jArray.getInt(0), jArray.getString(1), jArray.getString(2), jArray.getString(3), jArray.getInt(4), jArray.getInt(5), jArray.getInt(6), jArray.getString(7));
 								}
 								catch (JSONException e) {e.printStackTrace();}
@@ -218,10 +215,10 @@ public class ConnexionActivity extends BaseActivity {
 
 			}
 			else if (result.charAt(0) == 'C') {
-				Toast.makeText(ConnexionActivity.this, "Wrong cellphone or password", Toast.LENGTH_LONG).show();
+				Toast.makeText(ConnexionActivity.this, "Mauvais telephone ou mot de passe", Toast.LENGTH_LONG).show();
 			}
 			else if (result.charAt(0) == 'D') {
-				Toast.makeText(ConnexionActivity.this, "Some inputs are missing", Toast.LENGTH_LONG).show();
+				Toast.makeText(ConnexionActivity.this, "Les donnees sont incompletes", Toast.LENGTH_LONG).show();
 			}/*
 			else {
 				AlertDialog alertDialog = new AlertDialog.Builder(ConnexionActivity.this).create();

@@ -7,12 +7,12 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    android:background="#00802b">
+    android:background="#fff">
 
     <Button
         android:id="@+id/logoutDeconnexionButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Log out" />
+        android:text="Déconnexion" />
 
 </LinearLayout>

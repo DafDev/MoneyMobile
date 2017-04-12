@@ -1,0 +1,65 @@
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical"
+    android:background="#fff">
+
+    <Button
+        android:text="Retirer 20euro"
+        android:id="@+id/retirer_20euro"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"/>
+    <Button
+        android:text="Retirer 40 euro"
+        android:id="@+id/retirer_40euro"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:layout_gravity="right"/>
+    <Button
+        android:text="Retirer 60 euro"
+        android:id="@+id/retirer_60euro"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"/>
+    <Button
+        android:text="Retirer 80 euro"
+        android:id="@+id/retirer_80euro"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:layout_gravity="right"/>
+
+    <Button
+        android:text="Retirer 100 euro"
+        android:id="@+id/retirer_100euro"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"/>
+
+    <EditText
+        android:id="@+id/retirerplusEditText"
+        android:layout_width="145dp"
+        android:layout_height="wrap_content"
+        android:digits="0123456789-"
+        android:layout_gravity="right"
+        android:hint="@string/montant"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Envoyer Plus"
+        android:id="@+id/retirerplusButton"
+        android:layout_gravity="right"/>
+
+    <Button
+        android:text="@string/gerer_compte"
+        android:id="@+id/gerer_compte"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"/>
+
+    <Button
+        android:text="@string/menu_accueil"
+        android:id="@+id/back_menu_accueil"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:layout_gravity="center"/>
+
+</LinearLayout>

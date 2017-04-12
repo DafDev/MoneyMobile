@@ -17,13 +17,9 @@ public class AccueilActivity extends BaseActivity {
 	private User user;
 	Bundle newBundle = new Bundle();
 	private Button envoyer;
-	private Button demander;
-	private Button accepter;
 	private Button gererCompte;
 	private Button historique;
-	private Button gererPseudo;
 	private Button coopter;
-	private Button aide;
 	private Button deconnexion;
 	
 	@Override
@@ -33,25 +29,16 @@ public class AccueilActivity extends BaseActivity {
 		
 		newBundle = getIntent().getExtras();
 		
-		envoyer 		= (Button) findViewById(R.id.envoyer_argent); 
-		demander 		=  (Button) findViewById(R.id.demander_argent);
+		envoyer 		= (Button) findViewById(R.id.envoyer_argent);
 		gererCompte 	=  (Button) findViewById(R.id.gerer_compte);
 		historique 		=  (Button) findViewById(R.id.historique);
 		coopter 		=  (Button) findViewById(R.id.coopter_ami);
-		aide 			=  (Button) findViewById(R.id.aide);
 		deconnexion 	=  (Button) findViewById(R.id.deconnexionAccueilActivity);
 		
 		envoyer.setOnClickListener(new View.OnClickListener() {
 			@Override
 			public void onClick(View v) {
 				ActivityUtil.switchActivity(AccueilActivity.this, EnvoyerArgentActivity.class, newBundle, true);
-			}
-		});
-		
-		demander.setOnClickListener(new View.OnClickListener() {
-			@Override
-			public void onClick(View v) {
-				ActivityUtil.switchActivity(AccueilActivity.this, DemanderArgentActivity.class, newBundle, true);
 			}
 		});
 		
@@ -73,13 +60,6 @@ public class AccueilActivity extends BaseActivity {
 			@Override
 			public void onClick(View v) {
 				ActivityUtil.switchActivity(AccueilActivity.this, CoopterUnAmiActivity.class, newBundle, true);
-			}
-		});
-		
-		aide.setOnClickListener(new View.OnClickListener() {
-			@Override
-			public void onClick(View v) {
-				ActivityUtil.switchActivity(AccueilActivity.this, AideActivity.class, newBundle, true);
 			}
 		});
 		

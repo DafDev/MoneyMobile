@@ -121,11 +121,11 @@ public class HistoriqueActivity extends BaseActivity {
 						try {
 							jArrayElem = (JSONArray) jArray.get(i);
 							result.append("Transaction "+i+"\n");
-							result.append("Sender : "+jArrayElem.get(1)+"\n");
-							result.append("Receiver : "+jArrayElem.get(2)+"\n");
-							result.append("Amount : "+jArrayElem.get(3)+"\n");
-							result.append("Change rate : "+jArrayElem.get(4)+"\n");
-							result.append("Date and time : "+jArrayElem.get(5)+"\n\n");
+							result.append("Emetteur : "+jArrayElem.get(1)+"\n");
+							result.append("Receveur : "+jArrayElem.get(2)+"\n");
+							result.append("Montant : "+jArrayElem.get(3)+"\n");
+							result.append("Taux de change : "+jArrayElem.get(4)+"\n");
+							result.append("Date et heure : "+jArrayElem.get(5)+"\n\n");
 						}
 						catch (JSONException e) {e.printStackTrace();}
 					}

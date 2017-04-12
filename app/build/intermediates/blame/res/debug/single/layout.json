@@ -1,9 +1,5 @@
 [
     {
-        "merged": "D:\\PROJET MONEY\\MoneyMobile\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_gerer_mon_pseudo.xml",
-        "source": "D:\\PROJET MONEY\\MoneyMobile\\app\\src\\main\\res\\layout\\activity_gerer_mon_pseudo.xml"
-    },
-    {
         "merged": "D:\\PROJET MONEY\\MoneyMobile\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_confirmer_virement.xml",
         "source": "D:\\PROJET MONEY\\MoneyMobile\\app\\src\\main\\res\\layout\\activity_confirmer_virement.xml"
     },
@@ -16,10 +12,6 @@
         "source": "D:\\PROJET MONEY\\MoneyMobile\\app\\src\\main\\res\\layout\\activity_coopter_un_ami.xml"
     },
     {
-        "merged": "D:\\PROJET MONEY\\MoneyMobile\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_nouveau_solde.xml",
-        "source": "D:\\PROJET MONEY\\MoneyMobile\\app\\src\\main\\res\\layout\\activity_nouveau_solde.xml"
-    },
-    {
         "merged": "D:\\PROJET MONEY\\MoneyMobile\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_demander_argent.xml",
         "source": "D:\\PROJET MONEY\\MoneyMobile\\app\\src\\main\\res\\layout\\activity_demander_argent.xml"
     },
@@ -28,8 +20,16 @@
         "source": "D:\\PROJET MONEY\\MoneyMobile\\app\\src\\main\\res\\layout\\activity_deconnexion.xml"
     },
     {
+        "merged": "D:\\PROJET MONEY\\MoneyMobile\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_retirer_confirmation.xml",
+        "source": "D:\\PROJET MONEY\\MoneyMobile\\app\\src\\main\\res\\layout\\activity_retirer_confirmation.xml"
+    },
+    {
         "merged": "D:\\PROJET MONEY\\MoneyMobile\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_connexion.xml",
         "source": "D:\\PROJET MONEY\\MoneyMobile\\app\\src\\main\\res\\layout\\activity_connexion.xml"
+    },
+    {
+        "merged": "D:\\PROJET MONEY\\MoneyMobile\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_retirer.xml",
+        "source": "D:\\PROJET MONEY\\MoneyMobile\\app\\src\\main\\res\\layout\\activity_retirer.xml"
     },
     {
         "merged": "D:\\PROJET MONEY\\MoneyMobile\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_gerer_mon_compte.xml",
@@ -52,10 +52,6 @@
         "source": "D:\\PROJET MONEY\\MoneyMobile\\app\\src\\main\\res\\layout\\activity_historique.xml"
     },
     {
-        "merged": "D:\\PROJET MONEY\\MoneyMobile\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_solde_compte.xml",
-        "source": "D:\\PROJET MONEY\\MoneyMobile\\app\\src\\main\\res\\layout\\activity_solde_compte.xml"
-    },
-    {
         "merged": "D:\\PROJET MONEY\\MoneyMobile\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_recharger_compte_confirmation.xml",
         "source": "D:\\PROJET MONEY\\MoneyMobile\\app\\src\\main\\res\\layout\\activity_recharger_compte_confirmation.xml"
     },
@@ -68,15 +64,11 @@
         "source": "D:\\PROJET MONEY\\MoneyMobile\\app\\src\\main\\res\\layout\\activity_aide.xml"
     },
     {
-        "merged": "D:\\PROJET MONEY\\MoneyMobile\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_recharger_compte.xml",
-        "source": "D:\\PROJET MONEY\\MoneyMobile\\app\\src\\main\\res\\layout\\activity_recharger_compte.xml"
-    },
-    {
         "merged": "D:\\PROJET MONEY\\MoneyMobile\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_accueil.xml",
         "source": "D:\\PROJET MONEY\\MoneyMobile\\app\\src\\main\\res\\layout\\activity_accueil.xml"
     },
     {
-        "merged": "D:\\PROJET MONEY\\MoneyMobile\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_valider_recharge_compte.xml",
-        "source": "D:\\PROJET MONEY\\MoneyMobile\\app\\src\\main\\res\\layout\\activity_valider_recharge_compte.xml"
+        "merged": "D:\\PROJET MONEY\\MoneyMobile\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_recharger_compte.xml",
+        "source": "D:\\PROJET MONEY\\MoneyMobile\\app\\src\\main\\res\\layout\\activity_recharger_compte.xml"
     }
 ]

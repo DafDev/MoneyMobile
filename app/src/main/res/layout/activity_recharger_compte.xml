@@ -3,13 +3,7 @@
         android:layout_width="fill_parent"
         android:layout_height="fill_parent"
         android:orientation="vertical"
-        android:background="#00802b">
-
-    <!-- TextView
-        android:id="@+id/menu_accueil"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/menu_accueil" /-->
+        android:background="#fff">
     
     <Button
         android:text="@string/recharger_20euro"
@@ -45,14 +39,13 @@
         android:layout_width="145dp"
         android:layout_height="wrap_content"
         android:digits="0123456789-"
-        android:background="#fff"
         android:layout_gravity="right"
         android:hint="@string/montant"/>
 
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Envoyer Plus"
+        android:text="Recharger Plus"
         android:id="@+id/envoyerplusButton"
         android:layout_gravity="right"/>
 

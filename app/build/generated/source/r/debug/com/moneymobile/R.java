@@ -28,50 +28,59 @@ public final class R {
         public static final int ic_refresh=0x7f020003;
     }
     public static final class id {
-        public static final int action_settings=0x7f09002b;
-        public static final int aide=0x7f090006;
-        public static final int back_menu_accueil=0x7f090026;
-        public static final int back_menu_accueilGerermoncompte=0x7f090013;
-        public static final int bicInscriptionEditText=0x7f09001c;
-        public static final int button=0x7f090007;
+        public static final int action_settings=0x7f090034;
+        public static final int back_menu_accueil=0x7f090024;
+        public static final int back_menu_accueilGerermoncompte=0x7f090014;
+        public static final int back_menu_accueilRetirer=0x7f090032;
+        public static final int bicInscriptionEditText=0x7f09001a;
+        public static final int button=0x7f090005;
         public static final int button3=0x7f09000d;
-        public static final int button5=0x7f09002a;
-        public static final int cellphoneConnexionEditText=0x7f090008;
-        public static final int cellphoneInscriptionEditText=0x7f09001a;
-        public static final int coopter_ami=0x7f090004;
-        public static final int deconnexion=0x7f090029;
-        public static final int deconnexionAccueilActivity=0x7f090005;
-        public static final int demander_argent=0x7f090001;
+        public static final int cellphoneConnexionEditText=0x7f090006;
+        public static final int cellphoneInscriptionEditText=0x7f090018;
+        public static final int coopter_ami=0x7f090003;
+        public static final int deconnexion=0x7f090027;
+        public static final int deconnexionAccueilActivity=0x7f090004;
+        public static final int deconnexionRetirer=0x7f090033;
+        public static final int emailTextView=0x7f09000a;
         public static final int envoyer_argent=0x7f090000;
-        public static final int envoyerplusButton=0x7f090025;
-        public static final int envoyerplusRechargerCompteEditText=0x7f090024;
-        public static final int firstnameInscriptionEditText=0x7f090018;
-        public static final int gerer_compte=0x7f090002;
-        public static final int historique=0x7f090003;
-        public static final int historiqueTextView=0x7f090017;
-        public static final int ibanInscriptionEditText=0x7f09001b;
-        public static final int lastnameInscriptionEditText=0x7f090019;
+        public static final int envoyerplusButton=0x7f090023;
+        public static final int envoyerplusRechargerCompteEditText=0x7f090022;
+        public static final int firstnameInscriptionEditText=0x7f090016;
+        public static final int gerer_compte=0x7f090001;
+        public static final int gerer_compteRetirer=0x7f090031;
+        public static final int historique=0x7f090002;
+        public static final int historiqueTextView=0x7f090015;
+        public static final int ibanInscriptionEditText=0x7f090019;
+        public static final int lastnameInscriptionEditText=0x7f090017;
         public static final int logoutDeconnexionButton=0x7f09000c;
-        public static final int message_accueil=0x7f090027;
+        public static final int message_accueilRechargercompteconfirmationTextView=0x7f090025;
+        public static final int message_accueilRetirerconfirmationTextView=0x7f09002f;
         public static final int montantEnvoyerArgentEditText=0x7f09000e;
-        public static final int newpasswordEditText=0x7f090015;
-        public static final int newusernameEditText=0x7f090014;
-        public static final int passwordConnexionEditText=0x7f090009;
-        public static final int passwordInscriptionEditText=0x7f09001d;
-        public static final int recharger_100euro=0x7f090023;
-        public static final int recharger_20euro=0x7f09001f;
-        public static final int recharger_40euro=0x7f090020;
-        public static final int recharger_60euro=0x7f090021;
-        public static final int recharger_80euro=0x7f090022;
-        public static final int recharger_compteGererMonCompte=0x7f090011;
-        public static final int resgisterConnexionButton=0x7f09000b;
-        public static final int retirer_argentGererMonCompte=0x7f090012;
+        public static final int montantGererMonCompte=0x7f090011;
+        public static final int passwordConnexionEditText=0x7f090007;
+        public static final int passwordInscriptionEditText=0x7f09001b;
+        public static final int recharger_100euro=0x7f090021;
+        public static final int recharger_20euro=0x7f09001d;
+        public static final int recharger_40euro=0x7f09001e;
+        public static final int recharger_60euro=0x7f09001f;
+        public static final int recharger_80euro=0x7f090020;
+        public static final int recharger_compteGererMonCompte=0x7f090012;
+        public static final int resgisterConnexionButton=0x7f090009;
+        public static final int retirer_100euro=0x7f09002c;
+        public static final int retirer_20euro=0x7f090028;
+        public static final int retirer_40euro=0x7f090029;
+        public static final int retirer_60euro=0x7f09002a;
+        public static final int retirer_80euro=0x7f09002b;
+        public static final int retirer_argentGererMonCompte=0x7f090013;
+        public static final int retirerplusButton=0x7f09002e;
+        public static final int retirerplusEditText=0x7f09002d;
         public static final int telephoneEnvoyerArgentEditText=0x7f09000f;
-        public static final int updateButton=0x7f090016;
-        public static final int validateConnexionButton=0x7f09000a;
-        public static final int validateIncriptionButton=0x7f09001e;
-        public static final int valider=0x7f090028;
+        public static final int validateConnexionButton=0x7f090008;
+        public static final int validateIncriptionButton=0x7f09001c;
+        public static final int valider=0x7f090026;
+        public static final int validerCoopterButton=0x7f09000b;
         public static final int validerEnvoyerArgentButton=0x7f090010;
+        public static final int validerRetirer=0x7f090030;
     }
     public static final class layout {
         public static final int activity_accepter_argent=0x7f030000;
@@ -86,14 +95,12 @@ public final class R {
         public static final int activity_demander_argent=0x7f030009;
         public static final int activity_envoyer_argent=0x7f03000a;
         public static final int activity_gerer_mon_compte=0x7f03000b;
-        public static final int activity_gerer_mon_pseudo=0x7f03000c;
-        public static final int activity_historique=0x7f03000d;
-        public static final int activity_inscription=0x7f03000e;
-        public static final int activity_nouveau_solde=0x7f03000f;
-        public static final int activity_recharger_compte=0x7f030010;
-        public static final int activity_recharger_compte_confirmation=0x7f030011;
-        public static final int activity_solde_compte=0x7f030012;
-        public static final int activity_valider_recharge_compte=0x7f030013;
+        public static final int activity_historique=0x7f03000c;
+        public static final int activity_inscription=0x7f03000d;
+        public static final int activity_recharger_compte=0x7f03000e;
+        public static final int activity_recharger_compte_confirmation=0x7f03000f;
+        public static final int activity_retirer=0x7f030010;
+        public static final int activity_retirer_confirmation=0x7f030011;
     }
     public static final class menu {
         public static final int accepter_argent=0x7f080000;
@@ -177,8 +184,15 @@ public final class R {
     public static final class style {
         /**  API 11 theme customizations can go here. 
  API 14 theme customizations can go here. 
+
+            Theme customizations available in newer API levels can go in
+            res/values-vXX/styles.xml, while customizations related to
+            backward-compatibility can go here.
+        
          */
         public static final int AppBaseTheme=0x7f060000;
+        /**  All customizations that are NOT specific to a particular API-level can go here. 
+         */
         public static final int AppTheme=0x7f060001;
     }
 }

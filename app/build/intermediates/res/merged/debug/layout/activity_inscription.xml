@@ -3,12 +3,12 @@
 	android:layout_width="fill_parent"
 	android:layout_height="fill_parent"
 	android:orientation="vertical"
-	android:background="#00802b">
+	android:background="#fff">
    
     <EditText
 		android:id="@+id/firstnameInscriptionEditText"
 		android:hint="Prénom"
-		android:digits="abcdefghijklmnopqrstuvwxyz- "
+		android:digits="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ- "
 		android:layout_height="wrap_content"
 		android:layout_width="200dp"
 		android:layout_gravity="center_horizontal" >

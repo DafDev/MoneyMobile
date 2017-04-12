@@ -1,35 +1,35 @@
 <LinearLayout
-        xmlns:android="http://schemas.android.com/apk/res/android"
-        android:layout_width="fill_parent"
-        android:layout_height="fill_parent"
-        android:orientation="vertical"
-        android:background="#fff">
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical"
+    android:background="#fff">
 
     <TextView
-        android:id="@+id/message_accueilRechargercompteconfirmationTextView"
+        android:id="@+id/message_accueilRetirerconfirmationTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"/>
-    
+
     <Button
         android:text="@string/valider"
-        android:id="@+id/valider"
+        android:id="@+id/validerRetirer"
         android:layout_height="wrap_content"
         android:layout_width="wrap_content"/>
     <Button
         android:text="@string/gerer_compte"
-        android:id="@+id/gerer_compte"
+        android:id="@+id/gerer_compteRetirer"
         android:layout_height="wrap_content"
         android:layout_width="wrap_content"/>
 
-	<Button
+    <Button
         android:text="@string/menu_accueil"
-        android:id="@+id/back_menu_accueil"
+        android:id="@+id/back_menu_accueilRetirer"
         android:layout_height="wrap_content"
         android:layout_width="wrap_content"/>
 
     <Button
         android:text="@string/deconnexion"
-        android:id="@+id/deconnexion"
+        android:id="@+id/deconnexionRetirer"
         android:layout_height="wrap_content"
         android:layout_width="131dp"/>
 

@@ -3,18 +3,11 @@
 	android:layout_width="fill_parent"
 	android:layout_height="fill_parent"
 	android:orientation="vertical"
-	android:background="#00802b">
+	android:background="#fff">
 
 	<Button
 		android:text="@string/envoyer_argent"
 		android:id="@+id/envoyer_argent"
-		android:layout_height="wrap_content"
-		android:layout_width="193dp"
-		android:layout_gravity="center" />
-
-	<Button
-		android:text="@string/demander_argent"
-		android:id="@+id/demander_argent"
 		android:layout_height="wrap_content"
 		android:layout_width="193dp"
 		android:layout_gravity="center" />
@@ -45,13 +38,6 @@
 		android:id="@+id/deconnexionAccueilActivity"
 		android:layout_height="wrap_content"
 		android:layout_width="129dp"
-		android:layout_gravity="center" />
-
-	<Button
-		android:text="@string/aide"
-		android:id="@+id/aide"
-		android:layout_height="wrap_content"
-		android:layout_width="wrap_content"
 		android:layout_gravity="center" />
 
 </LinearLayout>

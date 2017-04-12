@@ -10,7 +10,6 @@ import beans.Banque;
 import beans.User;
 
 import com.moneymobile.RechargerCompteConfirmationActivity;
-import com.moneymobile.SoldeCompteActivity;
 import com.stackmob.sdk.api.StackMobOptions;
 import com.stackmob.sdk.api.StackMobQuery;
 import com.stackmob.sdk.callback.StackMobQueryCallback;

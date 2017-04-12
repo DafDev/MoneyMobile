@@ -1,11 +1,11 @@
 package com.moneymobile;
 
+import android.app.Activity;
 import android.app.ProgressDialog;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
 import android.os.AsyncTask;
 import android.os.Bundle;
-import android.app.Activity;
 import android.view.Menu;
 import android.view.View;
 import android.widget.Button;
@@ -31,48 +31,91 @@ import java.util.List;
 
 import beans.User;
 import util.ActivityUtil;
+import util.ValiderRechargeCompte;
 
-public class CoopterUnAmiActivity extends BaseActivity {
 
+public class RetirerConfirmationActivity extends Activity {
+
+	private TextView message_accueil;
+	private Button menu_accueil;
+	private Button deconnexion;
+	private Bundle bundle;
+	private Button valider;
+	private Button gererCompte;
+	private ValiderRechargeCompte recharge;
 	private ProgressDialog pd;
-	private TextView emailTextView;
-	private Button coopterButton;
-	private String emailString;
+	private int montant;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		setContentView(R.layout.activity_coopter_un_ami);
-		emailTextView = (TextView) findViewById(R.id.emailTextView);
-		coopterButton = (Button) findViewById(R.id.validerCoopterButton);
+		setContentView(R.layout.activity_recharger_compte_confirmation); 
+		
+		bundle 				= getIntent().getExtras();
+		message_accueil		= (TextView) findViewById(R.id.message_accueilRechargercompteconfirmationTextView);
+		valider				= (Button) findViewById(R.id.valider);
+		gererCompte 		= (Button) findViewById(R.id.gerer_compte);
+		menu_accueil 		= (Button) findViewById(R.id.back_menu_accueil);
+		deconnexion			= (Button) findViewById(R.id.deconnexion);
 
-		coopterButton.setOnClickListener(new View.OnClickListener() {
+		montant				= bundle.getInt("retirer");
+		
+		
+		message_accueil.setText("Montant du retrait "+montant+" Euro(s)");
+		recharge = new ValiderRechargeCompte(bundle);
+		
+		
+		
+		menu_accueil.setOnClickListener(new View.OnClickListener() {
+			
 			@Override
 			public void onClick(View arg0) {
+				ActivityUtil.switchActivity(RetirerConfirmationActivity.this, AccueilActivity.class, bundle, true);
+				
+			}
+		});
+		
+		deconnexion.setOnClickListener(new View.OnClickListener() {
+			
+			@Override
+			public void onClick(View arg0) {
+				ActivityUtil.switchActivity(RetirerConfirmationActivity.this, DeconnexionActivity.class, bundle, true);
+				
+			}
+		});
+
+		valider.setOnClickListener(new View.OnClickListener() {
+			@Override
+			public void onClick(View v) {
 				// Test présence internet
 				ConnectivityManager connectivityManager = (ConnectivityManager) getSystemService(CONNECTIVITY_SERVICE);
 				NetworkInfo networkInfo = connectivityManager.getActiveNetworkInfo();
 
 				if (networkInfo != null && networkInfo.isAvailable() && networkInfo.isConnected()) {
-					//boolean wifi = networkInfo.getType() == ConnectivityManager.TYPE_WIFI;
-					emailString = emailTextView.getText().toString();
-					new coopterTask().execute();
+					new validerTask().execute();
 				} else {
-					Toast.makeText(CoopterUnAmiActivity.this, "Vous n'etes pas connecté à Internet", Toast.LENGTH_LONG).show();
-					ActivityUtil.switchActivity(CoopterUnAmiActivity.this, AccueilActivity.class, new Bundle(), true);
+					Toast.makeText(RetirerConfirmationActivity.this, "Vous n'etes pas connecté à Internet", Toast.LENGTH_LONG).show();
+					ActivityUtil.switchActivity(RetirerConfirmationActivity.this, GererMonCompteActivity.class, new Bundle(), true);
 				}
+
 			}
 		});
+		
+		gererCompte.setOnClickListener(new View.OnClickListener() {
+			@Override
+			public void onClick(View v) {
+				ActivityUtil.switchActivity(RetirerConfirmationActivity.this, GererMonCompteActivity.class, bundle, true);
+			}
+		});
+		
 	}
 
-
-
-	private class coopterTask extends AsyncTask<String, String, String> {
+	private class validerTask extends AsyncTask<String, String, String> {
 
 		protected void onPreExecute() {
 			super.onPreExecute();
 
-			pd = new ProgressDialog(CoopterUnAmiActivity.this);
+			pd = new ProgressDialog(RetirerConfirmationActivity.this);
 			pd.setMessage("Veuillez patienter");
 			pd.setCancelable(false);
 			pd.show();
@@ -80,13 +123,13 @@ public class CoopterUnAmiActivity extends BaseActivity {
 
 		protected String doInBackground(String... params) {
 			HttpClient httpclient = new DefaultHttpClient();
-			HttpPost httppost = new HttpPost("http://10.0.2.2/moneymobile/coopter.php");
+			HttpPost httppost = new HttpPost("http://10.0.2.2/moneymobile/retrait.php");
 
 			// Request parameters and other properties.
 			List<NameValuePair> parameters = new ArrayList<NameValuePair>(2);
 			parameters.add(new BasicNameValuePair("telephone", User.getTelephone()));
 			parameters.add(new BasicNameValuePair("password", User.getMdp()));
-			parameters.add(new BasicNameValuePair("email", emailString));
+			parameters.add(new BasicNameValuePair("amount", montant+""));
 			try {
 				httppost.setEntity(new UrlEncodedFormEntity(parameters, "UTF-8"));
 			}
@@ -109,6 +152,7 @@ public class CoopterUnAmiActivity extends BaseActivity {
 					while ((line = reader.readLine()) != null) {
 						buffer.append("\n" + line);
 					}
+					User.setSolde(User.getSolde()-montant);
 					return buffer.toString();
 				}
 			}
@@ -122,9 +166,16 @@ public class CoopterUnAmiActivity extends BaseActivity {
 			if (pd.isShowing()) {
 				pd.dismiss();
 			}
-			System.out.println(result);
-			Toast.makeText(CoopterUnAmiActivity.this, result, Toast.LENGTH_LONG).show();
-			ActivityUtil.switchActivity(CoopterUnAmiActivity.this, AccueilActivity.class, new Bundle(), true);
+			Toast.makeText(RetirerConfirmationActivity.this, result, Toast.LENGTH_LONG).show();
+			ActivityUtil.switchActivity(RetirerConfirmationActivity.this, GererMonCompteActivity.class, bundle, true);
 		}
 	}
+
+	@Override
+	public boolean onCreateOptionsMenu(Menu menu) {
+		// Inflate the menu; this adds items to the action bar if it is present.
+		getMenuInflater().inflate(R.menu.recharger_compte_confirmation, menu);
+		return true;
+	}
+
 }

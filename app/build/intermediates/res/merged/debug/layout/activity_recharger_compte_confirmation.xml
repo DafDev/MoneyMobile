@@ -3,10 +3,10 @@
         android:layout_width="fill_parent"
         android:layout_height="fill_parent"
         android:orientation="vertical"
-        android:background="#00802b">
+        android:background="#fff">
 
     <TextView
-        android:id="@+id/message_accueil"
+        android:id="@+id/message_accueilRechargercompteconfirmationTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"/>
     
